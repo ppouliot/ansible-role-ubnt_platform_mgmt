@@ -10,7 +10,7 @@ After doing some research I realized there's a bunch fo scattered material for a
 The goal is to consolidate that information and simplify the extension of the core platform to enable things like LetsEncrypt, Easy OpenVPN Connectivity, OSPF, MPLS and Other Advanced Configures.
 
 
-| UBNT Device | Install SSH Keys | LetsEncrypt |
+| UBNT Device | Install SSH Keys | [LetsEncrypt](https://letsencrypt.org) |
 | --- | --- | --- |
 | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | | |
 | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | | |
