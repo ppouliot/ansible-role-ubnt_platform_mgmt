@@ -26,8 +26,7 @@ A list features based on the research included here I'm hoping to implement.
 ## Requirements
 ------------------
 
-Some UBNT (EdgeRouter/UniFI) Devices to Manage. 
-
+* Some UBNT (EdgeRouter/UniFI) Devices to Manage. 
 * [unifi_controller_facts](https://github.com/ppouliot/ansible_module-unifi_controller_facts)
 
 
