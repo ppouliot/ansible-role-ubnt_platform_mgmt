@@ -81,6 +81,15 @@ Here is a non-working  example of typical usage.
 * [https://github.com/sensu-plugins/sensu-plugins-ubiquiti](https://github.com/sensu-plugins/sensu-plugins-ubiquiti)
 * [https://github.com/oldsj/edgerouter-automation](https://github.com/oldsj/edgerouter-automation)
 * [https://github.com/Twanislas/ubnt-cloudflared](https://github.com/Twanislas/ubnt-cloudflared)
+* [https://github.com/WaterByWind/monitoring-utilities](https://github.com/WaterByWind/monitoring-utilities)
+* [https://github.com/Ar0xA/USG-DNS-ADBLOCK](https://github.com/Ar0xA/USG-DNS-ADBLOCK)
+* [https://github.com/amarcu5/EdgeOS-Blacklist](https://github.com/amarcu5/EdgeOS-Blacklist)
+* [https://github.com/hobbyquaker/unifi2mqtt](https://github.com/hobbyquaker/unifi2mqtt)
+* [https://github.com/tbyehl/edgerouter-backup](https://github.com/tbyehl/edgerouter-backup)
+* [https://github.com/brianredbeard/edgeos_setup](https://github.com/brianredbeard/edgeos_setup)
+* [https://github.com/davidmaitland/unifi-voucher-generator](https://github.com/davidmaitland/unifi-voucher-generator)
+* [https://github.com/finish06/pyunifi](https://github.com/finish06/pyunifi)
+* [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
 
 ## Contributors
 ------------
