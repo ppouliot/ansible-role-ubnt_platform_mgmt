@@ -90,6 +90,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/davidmaitland/unifi-voucher-generator](https://github.com/davidmaitland/unifi-voucher-generator)
 * [https://github.com/finish06/pyunifi](https://github.com/finish06/pyunifi)
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
+* [https://github.com/syncloudsoft/unifi-client](https://github.com/syncloudsoft/unifi-client)
 
 ## Contributors
 ------------
