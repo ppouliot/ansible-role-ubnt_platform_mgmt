@@ -111,7 +111,7 @@ Here is a non-working  example of typical usage.
 * [Nagios Plugin to check Unifi Controller](https://github.com/msweetser/check_unifi)
 * [Sensu plugin that polls metrics from UBNT Unifi wireless controllers](https://github.com/sensu-plugins/sensu-plugins-ubiquiti)
 * [Collect your Unifi Controller Data and send it to an InfluxDB instance. Grafana dashboards included](https://github.com/davidnewhall/unifi-poller)
-* [Periodic monitoring of UBNT EdgeRouter metrics not otherwise available via SNMP and logging to time-series database](https://github.com/WaterByWind/monitoring-utilities)
+* [Periodic monitoring of UBNT EdgeRouter metrics not otherwise available via SNMP and logging to InfluxDB/Grafana](https://github.com/WaterByWind/monitoring-utilities)
 * [Simple web server that connects to a Ubiquiti Edge Router to show who is using a substantial amount of data](https://github.com/declanwoods/WhosTheHog)
 
 ## Contributors
