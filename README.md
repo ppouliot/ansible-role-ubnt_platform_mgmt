@@ -80,6 +80,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/davidnewhall/unifi-poller](https://github.com/davidnewhall/unifi-poller)
 * [https://github.com/sensu-plugins/sensu-plugins-ubiquiti](https://github.com/sensu-plugins/sensu-plugins-ubiquiti)
 * [https://github.com/oldsj/edgerouter-automation](https://github.com/oldsj/edgerouter-automation)
+* [https://github.com/Twanislas/ubnt-cloudflared](https://github.com/Twanislas/ubnt-cloudflared)
 
 ## Contributors
 ------------
