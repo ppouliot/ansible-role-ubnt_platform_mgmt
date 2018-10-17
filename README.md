@@ -20,7 +20,8 @@ A list features based on the research included here I'm hoping to implement.
 | Install SSH Keys | | | | | |
 | SSH No Passwd Auth | | | | | |
 | [LetsEncrypt](https://letsencrypt.org) | | | | | |
-| [get-EdgeSwitch-config.sh](templates/get-EdgeSwitch-config.sh.j2) | | | | | Template Only |
+| [Get EdgeSwitch Config](templates/get-EdgeSwitch-config.sh.j2) | Template Only | N/A | N/A | N/A | Untested |
+| AWS Route53 DNS Update | N/A | Untested| Untested | Untested |
 
 
 ## Requirements
