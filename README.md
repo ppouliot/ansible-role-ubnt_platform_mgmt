@@ -14,6 +14,7 @@ The goal is to consolidate that information and simplify the extension of the co
 |Install SSH Keys | | | | |
 | SSH No Passwd Auth | | | | |
 | [LetsEncrypt](https://letsencrypt.org) | | | | |
+|[get-EdgeSwitch-config.sh](templates/get-EdgeSwitch-config.sh.j2) | | | | * |
 
 
 ## Requirements
