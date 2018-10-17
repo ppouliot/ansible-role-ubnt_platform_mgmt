@@ -114,8 +114,7 @@ Here is a non-working  example of typical usage.
 * [Sensu plugin that polls metrics from UBNT Unifi wireless controllers](https://github.com/sensu-plugins/sensu-plugins-ubiquiti)
 * [Collect your Unifi Controller Data and send it to an InfluxDB instance. Grafana dashboards included](https://github.com/davidnewhall/unifi-poller)
 * [https://github.com/WaterByWind/monitoring-utilities](https://github.com/WaterByWind/monitoring-utilities)
-* [https://github.com/hobbyquaker/unifi2mqtt](https://github.com/hobbyquaker/unifi2mqtt)
-* [https://github.com/declanwoods/WhosTheHog](https://github.com/declanwoods/WhosTheHog)
+* [Simple web server that connects to a Ubiquiti Edge Router to show who is using a substantial amount of data](https://github.com/declanwoods/WhosTheHog)
 
 ## Contributors
 ------------
