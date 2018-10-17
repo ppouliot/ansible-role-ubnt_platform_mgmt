@@ -64,7 +64,6 @@ Script template to get ERX config.
 ## Example Playbook
 Here is a non-working  example of typical usage.
 
-
 ```
 - hosts: localhost
   gather_facts: True
@@ -94,20 +93,14 @@ Here is a non-working  example of typical usage.
 * [https://github.com/syncloudsoft/unifi-client](https://github.com/syncloudsoft/unifi-client)
 * [https://github.com/hobbyquaker/unifi2mqtt](https://github.com/hobbyquaker/unifi2mqtt)
 
-* [https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts](https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts)
-
-
 ### Captive Portal/Wifi Addons
 * [https://github.com/davidmaitland/unifi-voucher-generator](https://github.com/davidmaitland/unifi-voucher-generator)
 
 ### Scripts
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
-* [https://github.com/mindc/ubiquiti](https://github.com/mindc/ubiquiti)
 * [https://github.com/oldsj/edgerouter-automation](https://github.com/oldsj/edgerouter-automation)
 * [https://github.com/brianredbeard/edgeos_setup](https://github.com/brianredbeard/edgeos_setup)
 * [kenmoini/unifi_controller_facts](https://github.com/kenmoini/ansible_modules/tree/master/unifi_controller_facts)
-
-
 
 ### Backup
 
