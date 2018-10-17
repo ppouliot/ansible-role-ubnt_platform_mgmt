@@ -82,6 +82,17 @@ Here is a non-working  example of typical usage.
 * [https://github.com/Ar0xA/USG-DNS-ADBLOCK](https://github.com/Ar0xA/USG-DNS-ADBLOCK)
 * [https://github.com/amarcu5/EdgeOS-Blacklist](https://github.com/amarcu5/EdgeOS-Blacklist)
 
+### VPN
+
+* [Pritunl to USG/Unifi](https://docs.pritunl.com/docs/ubiquiti-unifi)
+* [https://community.ubnt.com/t5/UniFi-Routing-Switching/OpenVPN-to-Pritunl-using-USG/td-p/2161699](https://community.ubnt.com/t5/UniFi-Routing-Switching/OpenVPN-to-Pritunl-using-USG/td-p/2161699)
+
+
+### Routing
+
+* [https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-PRO-4-amp-MPLS-Outbound-routing-works-but-unable-to-reach/td-p/2450723](https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-PRO-4-amp-MPLS-Outbound-routing-works-but-unable-to-reach/td-p/2450723):wq
+
+
 ### Cloud DNS
 
 * [Update AWS Route53](https://github.com/claytono/edgerouter-ansible)
