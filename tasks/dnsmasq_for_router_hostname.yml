@@ -1,0 +1,9 @@
+#!/usr/bin/env ansible-playbook
+---
+
+# Setup dnsmasq for router hostname
+- name: "Create addn-hosts file"
+  template:
+    dest: /config/local/addn-hosts
+    src: templates/addn-hosts.j2
+    force: yes

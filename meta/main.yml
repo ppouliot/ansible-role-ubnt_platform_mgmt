@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  role_name: ubnt_platform_mgmt
+  author: ppouliot
+  description: An ansible role for managing UBNT Devices.
+  license: 
+    - Apache
+  version: 0.0.1
+  min_ansible_version: 2.4
+  galaxy_tags:
+    - unifi
+    - usg
+    - edgerouterx
+    - edgerouter
+    - cloudkey
+  platforms:
+    - name: ubnt
+      versions:
+        - all
+dependencies: []
+# - role: ppouliot.container_linux_bootstrap

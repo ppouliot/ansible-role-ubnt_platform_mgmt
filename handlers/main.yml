@@ -1,0 +1,13 @@
+---
+# handlers file for ppouliot.ubnt_platform_mgmt
+
+- name: "restart lighttpd"
+  shell: "pkill lighttpd ; /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf"
+
+- name: "Uncompress binary"
+  shell: "gunzip -c sync-hosts-to-route53-{{ sync_version }}.gz > sync-hosts-to-route53.tmp && mv sync-hosts-to-route53.tmp sync-hosts-to-route53"
+  args:
+    chdir: "/config/local"
+
+- name: "restart sync-hosts-to-route53"
+  command: "/config/scripts/post-config.d/sync-hosts-to-route53.sh restart"

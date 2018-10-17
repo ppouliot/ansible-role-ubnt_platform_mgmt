@@ -1,0 +1,38 @@
+#!/usr/bin/env ansible-playbook
+# task/install_sync-hosts-to-route53-binary.yml
+---
+
+- name: "Download compressed binary"
+  get_url:
+    url: "https://github.com/claytononeill/sync-hosts-to-route53/releases/download/{{ aws_route53_sync_version }}/sync-hosts-to-route53-linux-mips.gz"
+    dest: "/config/local/sync-hosts-to-route53-{{ aws_route53_sync_version }}.gz"
+    owner: "root"
+    group: "root"
+    mode: "0644"
+  notify:
+    - "Uncompress binary"
+    - "restart sync-hosts-to-route53"
+
+- name: "Finish setup for sync-hosts-to-route53"
+  hosts: edgerouter
+  become: yes
+  gather_facts: no
+  tasks:
+    - include_vars: "vault.yaml"
+
+    - name: "Set owner/mode on binary"
+      file:
+        name: "/config/local/sync-hosts-to-route53"
+        owner: "root"
+        group: "root"
+        mode: "0755"
+
+    - name: "Create startup script"
+      template:
+        src: "templates/sync-hosts-to-route53.sh.j2"
+        dest: "/config/scripts/post-config.d/sync-hosts-to-route53.sh"
+        owner: "root"
+        group: "root"
+        mode: "0755"
+      notify:
+        - "restart sync-hosts-to-route53"

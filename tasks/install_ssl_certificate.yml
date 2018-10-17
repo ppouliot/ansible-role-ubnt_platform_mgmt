@@ -1,0 +1,20 @@
+#!/usr/bin/env ansible-playbook
+---
+
+# Install SSL certificate
+- name: "Copy SSL certificate to router"
+  copy:
+    src: server.pem
+    dest: /config/local/server.pem
+    owner: root
+    group: root
+    mode: 0600
+  notify: "restart lighttpd"
+
+- name: "Link SSL certificate into Lighttpd directory"
+  file:
+    path: /etc/lighttpd/server.pem
+    src: /config/local/server.pem
+    state: link
+    force: yes
+  notify: "restart lighttpd"
