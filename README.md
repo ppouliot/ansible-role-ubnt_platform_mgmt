@@ -111,7 +111,7 @@ Here is a non-working  example of typical usage.
 
 ### Backup
 
-* [https://github.com/tbyehl/edgerouter-backup](https://github.com/tbyehl/edgerouter-backup)
+* [EdgeRouter to git repo backup scripts.](https://github.com/tbyehl/edgerouter-backup)
 
 ### Monitoring & Alerting
 
