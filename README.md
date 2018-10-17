@@ -9,6 +9,7 @@ An ansible role for managing and providing advanced configuration of [UBNT](http
 After doing some research I realized there's a bunch fo scattered material for automating management and taking advantage of the functionatly of these great network devices.
 The goal is to consolidate that information and simplify the extension of the core platform to enable things like LetsEncrypt, Easy OpenVPN Connectivity, OSPF, MPLS and Other Advanced Configures.
 
+| | UBNT Device|
 | Feature | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | [USG](https://www.ubnt.com/unifi-routing/usg/) | [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |
 | --- | --- | --- | --- | --- |
 |Install SSH Keys | | | | |
