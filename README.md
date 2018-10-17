@@ -10,12 +10,12 @@ After doing some research I realized there's a bunch fo scattered material for a
 The goal is to consolidate that information and simplify the extension of the core platform to enable things like LetsEncrypt, Easy OpenVPN Connectivity, OSPF, MPLS and Other Advanced Configures.
 
 
-| UBNT Device | Install SSH Keys | [LetsEncrypt](https://letsencrypt.org) |
-| --- | --- | --- |
-| [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | | |
-| [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | | |
-| [USG](https://www.ubnt.com/unifi-routing/usg/) | | |
-| [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |  |  |
+| UBNT Device | Install SSH Keys | Disable Password Auth | [LetsEncrypt](https://letsencrypt.org) |
+| --- | --- | --- | --- |
+| [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | | | |
+| [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | | | |
+| [USG](https://www.ubnt.com/unifi-routing/usg/) | | | |
+| [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) | | | |
 
 
 ## Requirements
@@ -63,6 +63,9 @@ Here is a non-working  example of typical usage.
 ```
 
 ## Links
+* [https://networkjutsu.com/hardening-edgerouter-lite-part-1/](https://networkjutsu.com/hardening-edgerouter-lite-part-1/)
+* [https://miketabor.com/enable-ssh-auto-login-ubiquiti-edgerouter-x/](https://miketabor.com/enable-ssh-auto-login-ubiquiti-edgerouter-x/)
+* [https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361](https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361)
 * [https://github.com/claytono/edgerouter-ansible](https://github.com/claytono/edgerouter-ansible)
 
 ## Contributors
