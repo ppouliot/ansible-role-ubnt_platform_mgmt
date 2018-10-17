@@ -68,30 +68,54 @@ Here is a non-working  example of typical usage.
 ```
 
 ## Resources
+
+### Security
+
 * [https://networkjutsu.com/hardening-edgerouter-lite-part-1/](https://networkjutsu.com/hardening-edgerouter-lite-part-1/)
 * [https://miketabor.com/enable-ssh-auto-login-ubiquiti-edgerouter-x/](https://miketabor.com/enable-ssh-auto-login-ubiquiti-edgerouter-x/)
 * [https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361](https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361)
-* [https://github.com/claytono/edgerouter-ansible](https://github.com/claytono/edgerouter-ansible)
 * [https://community.ubnt.com/t5/UniFi-Stories/Adding-Let-s-Encrypt-certificate-to-UniFi-Cloud-Key-without/cns-p/2222363](https://community.ubnt.com/t5/UniFi-Stories/Adding-Let-s-Encrypt-certificate-to-UniFi-Cloud-Key-without/cns-p/2222363)
-* [https://github.com/Art-of-WiFi/UniFi-API-client/](https://github.com/Art-of-WiFi/UniFi-API-client/)
-* [https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts](https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts)
-* [https://github.com/declanwoods/WhosTheHog](https://github.com/declanwoods/WhosTheHog)
-* [https://github.com/mindc/ubiquiti](https://github.com/mindc/ubiquiti)
-* [https://github.com/davidnewhall/unifi-poller](https://github.com/davidnewhall/unifi-poller)
-* [https://github.com/sensu-plugins/sensu-plugins-ubiquiti](https://github.com/sensu-plugins/sensu-plugins-ubiquiti)
-* [https://github.com/oldsj/edgerouter-automation](https://github.com/oldsj/edgerouter-automation)
-* [https://github.com/Twanislas/ubnt-cloudflared](https://github.com/Twanislas/ubnt-cloudflared)
-* [https://github.com/WaterByWind/monitoring-utilities](https://github.com/WaterByWind/monitoring-utilities)
 * [https://github.com/Ar0xA/USG-DNS-ADBLOCK](https://github.com/Ar0xA/USG-DNS-ADBLOCK)
 * [https://github.com/amarcu5/EdgeOS-Blacklist](https://github.com/amarcu5/EdgeOS-Blacklist)
-* [https://github.com/hobbyquaker/unifi2mqtt](https://github.com/hobbyquaker/unifi2mqtt)
+
+### Cloud DNS
+
+* [Update AWS Route53](https://github.com/claytono/edgerouter-ansible)
+* [Install cloudflared on UniFI Controller](https://github.com/Twanislas/ubnt-cloudflared)
+
+### API
+* [https://github.com/Art-of-WiFi/UniFi-API-client/](https://github.com/Art-of-WiFi/UniFi-API-client/)
 * [https://github.com/tbyehl/edgerouter-backup](https://github.com/tbyehl/edgerouter-backup)
-* [https://github.com/brianredbeard/edgeos_setup](https://github.com/brianredbeard/edgeos_setup)
-* [https://github.com/davidmaitland/unifi-voucher-generator](https://github.com/davidmaitland/unifi-voucher-generator)
-* [https://github.com/finish06/pyunifi](https://github.com/finish06/pyunifi)
-* [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
 * [https://github.com/syncloudsoft/unifi-client](https://github.com/syncloudsoft/unifi-client)
-* [https://github.com/msweetser/check_unifi](https://github.com/msweetser/check_unifi)
+* [https://github.com/hobbyquaker/unifi2mqtt](https://github.com/hobbyquaker/unifi2mqtt)
+
+* [https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts](https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts)
+
+
+### Captive Portal/Wifi Addons
+* [https://github.com/davidmaitland/unifi-voucher-generator](https://github.com/davidmaitland/unifi-voucher-generator)
+
+### Scripts
+* [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
+* [https://github.com/mindc/ubiquiti](https://github.com/mindc/ubiquiti)
+* [https://github.com/oldsj/edgerouter-automation](https://github.com/oldsj/edgerouter-automation)
+* [https://github.com/brianredbeard/edgeos_setup](https://github.com/brianredbeard/edgeos_setup)
+* [kenmoini/unifi_controller_facts](https://github.com/kenmoini/ansible_modules/tree/master/unifi_controller_facts)
+
+
+
+### Backup
+
+* [https://github.com/tbyehl/edgerouter-backup](https://github.com/tbyehl/edgerouter-backup)
+
+### Monitoring & Alerting
+
+* [Nagios Plugin to check Unifi Controller](https://github.com/msweetser/check_unifi)
+* [Sensu plugin that polls metrics from UBNT Unifi wireless controllers](https://github.com/sensu-plugins/sensu-plugins-ubiquiti)
+* [Collect your Unifi Controller Data and send it to an InfluxDB instance. Grafana dashboards included](https://github.com/davidnewhall/unifi-poller)
+* [https://github.com/WaterByWind/monitoring-utilities](https://github.com/WaterByWind/monitoring-utilities)
+* [https://github.com/hobbyquaker/unifi2mqtt](https://github.com/hobbyquaker/unifi2mqtt)
+* [https://github.com/declanwoods/WhosTheHog](https://github.com/declanwoods/WhosTheHog)
 
 ## Contributors
 ------------
