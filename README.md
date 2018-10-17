@@ -52,6 +52,9 @@ aws_route53_syslog_facility: local7
 aws_route53_exclude_host: nothisone.pouliot.net
 
 ```
+### Get EdgeSwitch Config
+Script template to get ERX config.
+* [get-EdgeSwitch-config.sh](templates/get-EdgeSwitch-config.sh.j2)
 
 ## Example Playbook
 Here is a non-working  example of typical usage.
@@ -73,6 +76,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/Art-of-WiFi/UniFi-API-client/](https://github.com/Art-of-WiFi/UniFi-API-client/)
 * [https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts](https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts)
 * [https://github.com/declanwoods/WhosTheHog](https://github.com/declanwoods/WhosTheHog)
+* [https://github.com/mindc/ubiquiti](https://github.com/mindc/ubiquiti)
 
 ## Contributors
 ------------
