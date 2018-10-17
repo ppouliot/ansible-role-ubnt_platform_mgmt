@@ -77,6 +77,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts](https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts)
 * [https://github.com/declanwoods/WhosTheHog](https://github.com/declanwoods/WhosTheHog)
 * [https://github.com/mindc/ubiquiti](https://github.com/mindc/ubiquiti)
+* [https://github.com/davidnewhall/unifi-poller](https://github.com/davidnewhall/unifi-poller)
 
 ## Contributors
 ------------
