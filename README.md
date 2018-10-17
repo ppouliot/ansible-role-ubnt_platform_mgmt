@@ -23,6 +23,8 @@ The goal is to consolidate that information and simplify the extension of the co
 
 Some UBNT (EdgeRouter/UniFI) Devices to Manage. 
 
+* [unifi_controller_facts](https://github.com/kenmoini/ansible_modules/tree/master/unifi_controller_facts)
+
 
 ## Role Variables
 ------------------
@@ -68,6 +70,8 @@ Here is a non-working  example of typical usage.
 * [https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361](https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361)
 * [https://github.com/claytono/edgerouter-ansible](https://github.com/claytono/edgerouter-ansible)
 * [https://community.ubnt.com/t5/UniFi-Stories/Adding-Let-s-Encrypt-certificate-to-UniFi-Cloud-Key-without/cns-p/2222363](https://community.ubnt.com/t5/UniFi-Stories/Adding-Let-s-Encrypt-certificate-to-UniFi-Cloud-Key-without/cns-p/2222363)
+* [https://github.com/Art-of-WiFi/UniFi-API-client/](https://github.com/Art-of-WiFi/UniFi-API-client/)
+* [https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts](https://github.com/FierceSoftware/ansible_modules/tree/master/unifi_controller_facts)
 
 ## Contributors
 ------------
