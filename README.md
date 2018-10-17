@@ -14,14 +14,14 @@ The goal is to consolidate that information and simplify the extension of the co
 
 A list features based on the research included here I'm hoping to implement.
 
-| Feature | Ansible Controller | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | [USG](https://www.ubnt.com/unifi-routing/usg/) | [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |
+| Feature | Ansible | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | [USG](https://www.ubnt.com/unifi-routing/usg/) | [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |
 | --- | --- | --- | --- | --- | --- |
 | [unifi_controller_facts](https://github.com/ppouliot/ansible_module-unifi_controller_facts) | library | | | |
 | [Install SSH Keys](tasks/install_ssh_authorized_keys.yml) | task | untested | untested | untested| untested |
 | SSH No Passwd Auth | task | | | | |
 | [LetsEncrypt](https://letsencrypt.org) | | | | | |
-| [Get EdgeSwitch Config](templates/get-EdgeSwitch-config.sh.j2) | template only | N/A | N/A | N/A | Untested |
-| [AWS Route53 DNS Update](tasks/install_sync-hosts-to-route53_binary.yml) | task | Untested | N/A | N/A | N/A |
+| [Get EdgeSwitch Config](templates/get-EdgeSwitch-config.sh.j2) | template only | n/a | n/a | n/a | untested |
+| [AWS Route53 DNS Update](tasks/install_sync-hosts-to-route53_binary.yml) | task | Untested | n/a | n/a | n/a |
 
 
 ## Requirements
