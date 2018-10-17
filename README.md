@@ -21,7 +21,7 @@ A list features based on the research included here I'm hoping to implement.
 | SSH No Passwd Auth | | | | | |
 | [LetsEncrypt](https://letsencrypt.org) | | | | | |
 | [Get EdgeSwitch Config](templates/get-EdgeSwitch-config.sh.j2) | Template Only | N/A | N/A | N/A | Untested |
-| AWS Route53 DNS Update | N/A | Untested| N/A | N/A | N/A |
+| [AWS Route53 DNS Update](tasks/install_sync-hosts-to-route53_binary.yml) | task only | Untested | N/A | N/A | N/A |
 
 
 ## Requirements
