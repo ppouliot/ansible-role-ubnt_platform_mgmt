@@ -15,7 +15,7 @@ The goal is to consolidate that information and simplify the extension of the co
 | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | | | |
 | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | | | |
 | [USG](https://www.ubnt.com/unifi-routing/usg/) | | | |
-| [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) | | | |
+| [![EdgeRouterX](https://prd-www-cdn.ubnt.com/media/images/productgroup/edgerouter-x/edgerouter-x-product-group-small-2x.png)](https://www.ubnt.com/edgemax/edgerouter-x/) | | | |
 
 
 ## Requirements
