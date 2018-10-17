@@ -67,7 +67,7 @@ Here is a non-working  example of typical usage.
     - ppouliot.ubnt_platform_mgmt
 ```
 
-## Links
+## Resources
 * [https://networkjutsu.com/hardening-edgerouter-lite-part-1/](https://networkjutsu.com/hardening-edgerouter-lite-part-1/)
 * [https://miketabor.com/enable-ssh-auto-login-ubiquiti-edgerouter-x/](https://miketabor.com/enable-ssh-auto-login-ubiquiti-edgerouter-x/)
 * [https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361](https://community.ubnt.com/t5/EdgeRouter/ssh-authorized-keys/td-p/458361)
@@ -91,6 +91,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/finish06/pyunifi](https://github.com/finish06/pyunifi)
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
 * [https://github.com/syncloudsoft/unifi-client](https://github.com/syncloudsoft/unifi-client)
+* [https://github.com/msweetser/check_unifi](https://github.com/msweetser/check_unifi)
 
 ## Contributors
 ------------
