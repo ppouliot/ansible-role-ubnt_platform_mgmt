@@ -14,13 +14,13 @@ The goal is to consolidate that information and simplify the extension of the co
 
 A list features based on the research included here I'm hoping to implement.
 
-| Feature | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | [USG](https://www.ubnt.com/unifi-routing/usg/) | [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |
-| --- | --- | --- | --- | --- |
-| [unifi_controller_facts](https://github.com/ppouliot/ansible_module-unifi_controller_facts) | | | | 
-|Install SSH Keys | | | | |
-| SSH No Passwd Auth | | | | |
-| [LetsEncrypt](https://letsencrypt.org) | | | | |
-|[get-EdgeSwitch-config.sh](templates/get-EdgeSwitch-config.sh.j2) | | | | Template Only |
+| Feature | Ansible Controller | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | [USG](https://www.ubnt.com/unifi-routing/usg/) | [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |
+| --- | --- | --- | --- | --- | --- |
+| [unifi_controller_facts](https://github.com/ppouliot/ansible_module-unifi_controller_facts) | | | | |
+|Install SSH Keys | | | | | |
+| SSH No Passwd Auth | | | | | |
+| [LetsEncrypt](https://letsencrypt.org) | | | | | |
+|[get-EdgeSwitch-config.sh](templates/get-EdgeSwitch-config.sh.j2) | | | | | | Template Only 
 
 
 ## Requirements
