@@ -113,6 +113,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/brianredbeard/edgeos_setup](https://github.com/brianredbeard/edgeos_setup)
 * [kenmoini/unifi_controller_facts](https://github.com/kenmoini/ansible_modules/tree/master/unifi_controller_facts)
 * [https://github.com/btaub/misc-scripts/blob/master/get-EdgeSwitch-config.sh](https://github.com/btaub/misc-scripts/blob/master/get-EdgeSwitch-config.sh)
+* [https://github.com/jaysoffian/eap_proxy](https://github.com/jaysoffian/eap_proxy)
 
 ### Backup
 
