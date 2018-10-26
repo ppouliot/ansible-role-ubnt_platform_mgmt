@@ -133,7 +133,7 @@ Here is a non-working  example of typical usage.
 ### Configuration examples
 
 * [https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs](https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs)
-
+* [https://github.com/ekrunch/ubiquiti_unifi_configs](https://github.com/ekrunch/ubiquiti_unifi_configs)
 
 ## Contributors
 ------------
