@@ -149,12 +149,12 @@
     controller_username: "{{ unifi_ctrl_user }}"
     controller_password: "{{ unifi_ctrl_pass }}"
     controller_site: "{{ unifi_ctrl_site }}"
-    query: list_{{ unifi_ctrl_user }}s_for_all_sites
-  register: unifi_{{ unifi_ctrl_user }}s_for_all_sites
+    query: list_admins_for_all_sites
+  register: unifi_admins_for_all_sites
 
 - name: debug
   debug:
-    msg: "{{ unifi_{{ unifi_ctrl_user }}s_for_all_sites }}"
+    msg: "{{ unifi_admins_for_all_sites }}"
 
 - name: List Unifi Site Settings
   unifi_controller_facts:
