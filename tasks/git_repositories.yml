@@ -142,3 +142,25 @@
     dest: /usr/local/src/EdgeOS-Blacklist
     clone: yes
     update: yes
+
+- name: UBNT-EdgeRouter-Example-Configs from https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs to /usr/local/src
+  git:
+    repo: https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs
+    dest: /usr/local/src/UBNT-EdgeRouter-Example-Configs
+    clone: yes
+    update: yes
+
+
+- name: ubiquiti_unifi_configs from https://github.com/ekrunch/ubiquiti_unifi_configs to /usr/local/src
+  git:
+    repo: https://github.com/ekrunch/ubiquiti_unifi_configs
+    dest: /usr/local/src/ubiquiti_unifi_configs
+    clone: yes
+    update: yes
+
+- name: unifi-bytel from https://github.com/psaintemarie/unifi-bytel to /usr/local/src
+  git:
+    repo: https://github.com/psaintemarie/unifi-bytel
+    dest: /usr/local/src/unifi-bytel
+    clone: yes
+    update: yes
