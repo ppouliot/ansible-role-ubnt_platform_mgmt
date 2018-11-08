@@ -16,7 +16,7 @@ A list features based on the research included here I'm hoping to implement.
 
 | Feature | Ansible | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | [USG](https://www.ubnt.com/unifi-routing/usg/) | [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |
 | --- | --- | --- | --- | --- | --- |
-| unifi_controller_facts | [library](https://github.com/ppouliot/ansible_module-unifi_controller_facts) | | | |
+| unifi_controller_facts | [library](https://github.com/ppouliot/ansible_module-unifi_controller_facts) | [*](tasks/all_unifi_controller_facts.yml) | | |
 | Install SSH Keys | [task](tasks/install_ssh_authorized_keys.yml) | untested | untested | untested| untested |
 | SSH No Passwd Auth | task | | | | |
 | [LetsEncrypt](https://letsencrypt.org) | [task](tasks/letsencrypt_acme.yml) | | | | |

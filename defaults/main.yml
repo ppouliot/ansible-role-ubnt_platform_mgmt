@@ -1,5 +1,12 @@
 ---
 # defaults file for ppouliot.ubnt_platform_mgmt
+#
+
+# Unifi Controller Facts
+# unifi_ctrl_url: https://192.168.1.2:8443
+# unifi_ctrl_user: admin
+# unifi_ctrl_pass: PASSWORD
+unifi_ctrl_site: default
 
 # SSH Authorized Key for Access to UBNT Devices
 ubnt_ssh_authorized_key: ~/.ssh/id_ed25519.pub

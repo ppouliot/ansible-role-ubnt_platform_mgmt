@@ -1,0 +1,303 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: List Unifi online clients
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_online_clients
+  register: unifi_online_clients
+
+- name: debug
+  debug:
+    msg: "{{ unifi_online_clients }}"
+    
+- name: List clients
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_clients
+  register: unifi_clients
+
+- name: debug
+  debug:
+    msg: "{{ unifi_clients }}"
+    
+- name: Show all authorizations
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: stat_authorizations
+  register: unifi_authorizations
+
+- name: debug
+  debug:
+    msg: "{{ unifi_authorizations }}"
+
+- name: Show all login sessions
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: stat_sessions
+  register: unifi_login_sessions
+
+- name: debug
+  debug:
+    msg: "{{ unifi_login_sessions }}"
+
+- name: List Unifi Port Forwarding Stats
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: port_forwarding_stats
+  register: unifi_port_forwarding_stats
+
+- name: debug
+  debug:
+    msg: "{{ unifi_port_forwarding_stats }}"
+
+- name: List Unifi Site Health Metrics
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: site_health_metrics
+  register: unifi_site_health_metrics
+
+- name: debug
+  debug:
+    msg: "{{ unifi_site_health_metrics }}"
+
+- name: List Unifi DPI Stats
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: dpi_stats
+  register: unifi_dpi_stats
+
+- name: debug
+  debug:
+    msg: "{{ unifi_dpi_stats }}"
+
+- name: List Unifi Devices
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_devices
+  register: unifi_devices
+
+- name: debug
+  debug:
+    msg: "{{ unifi_devices }}"
+
+- name: List Unifi Tags
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_tags
+  register: unifi_tags
+
+- name: debug
+  debug:
+    msg: "{{ unifi_tags }}"
+
+- name: List Unifi Sites
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_sites
+  register: unifi_sites
+
+- name: debug
+  debug:
+    msg: "{{ unifi_sites }}"
+
+- name: List Unifi Sysinfo
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: sysinfo
+  register: unifi_sysinfo
+
+- name: debug
+  debug:
+    msg: "{{ unifi_sysinfo }}"
+
+- name: List Unifi Admin For All Sites
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_{{ unifi_ctrl_user }}s_for_all_sites
+  register: unifi_{{ unifi_ctrl_user }}s_for_all_sites
+
+- name: debug
+  debug:
+    msg: "{{ unifi_{{ unifi_ctrl_user }}s_for_all_sites }}"
+
+- name: List Unifi Site Settings
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_site_settings
+  register: unifi_site_settings
+
+- name: debug
+  debug:
+    msg: "{{ unifi_site_settings }}"
+
+- name: List Unifi WLAN Configuration
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_wlan_configuration
+  register: unifi_wlan_configuration
+
+- name: debug
+  debug:
+    msg: "{{ unifi_wlan_configuration }}"
+
+- name: List Unifi Network Configuration
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_network_configuration
+  register: unifi_network_configuration
+
+- name: debug
+  debug:
+    msg: "{{ unifi_network_configuration }}"
+
+- name: List Unifi Port Configuration
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_port_configuration
+  register: unifi_port_configuration
+
+- name: debug
+  debug:
+    msg: "{{ unifi_port_configuration }}"
+
+- name: List Unifi Firewall Groups
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_firewall_groups
+  register: unifi_firewall_groups
+
+- name: debug
+  debug:
+    msg: "{{ unifi_firewall_groups }}"
+
+- name: List Unifi Port Forwarding Rules
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_port_forwarding_rules
+  register: unifi_port_forwarding_rules
+
+- name: debug
+  debug:
+    msg: "{{ unifi_port_forwarding_rules }}"
+
+- name: List Unifi Country Codes
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_country_codes
+  register: unifi_country_codes
+
+- name: debug
+  debug:
+    msg: "{{ unifi_country_codes }}"
+
+- name: Unifi Dynamic DNS Configuration
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: dynamic_dns_configuration
+  register: unifi_dyn_dns
+
+- name: debug
+  debug:
+    msg: "{{ unifi_dyn_dns }}"
+
+#    - name: List Unifi AutoBackups
+#      unifi_controller_facts:
+#        controller_baseURL: "{{ unifi_ctrl_url }}"
+#        controller_username: "{{ unifi_ctrl_user }}"
+#        controller_password: "{{ unifi_ctrl_pass }}"
+#        controller_site: "{{ unifi_ctrl_site }}"
+#        query: list_auto_backups
+#      register: unifi_auto_backups
+
+#    - name: debug
+#      debug:
+#        msg: "{{ unifi_auto_backups }}"
+
+
+- name: List Unifi Alarms
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_alarms
+  register: unifi_alarms
+
+- name: debug
+  debug:
+    msg: "{{ unifi_alarms }}"
+
+
+- name: List Unifi Events
+  unifi_controller_facts:
+    controller_baseURL: "{{ unifi_ctrl_url }}"
+    controller_username: "{{ unifi_ctrl_user }}"
+    controller_password: "{{ unifi_ctrl_pass }}"
+    controller_site: "{{ unifi_ctrl_site }}"
+    query: list_events
+  register: unifi_events
+
+- name: debug
+  debug:
+    msg: "{{ unifi_events }}"
+
