@@ -7,6 +7,7 @@
 # unifi_ctrl_user: admin
 # unifi_ctrl_pass: PASSWORD
 unifi_ctrl_site: default
+unifi_ctrl_facts: True
 
 # SSH Authorized Key for Access to UBNT Devices
 ubnt_ssh_authorized_key: ~/.ssh/id_ed25519.pub

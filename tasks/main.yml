@@ -1,2 +1,9 @@
 ---
 # tasks file for ppouliot.ubnt_platform_mgmt
+#
+
+- name: Create an Azure Service Principle
+  include_tasks: all_unifi_controller_facts.yml
+  when:
+    - inventory_hostname == "localhost"
+    - unifi_ctrl_facts == True
