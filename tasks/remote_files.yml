@@ -1,0 +1,11 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: get-EdgeSwitch-config.sh from https://raw.githubusercontent.com/btaub/misc-scripts/master/get-EdgeSwitch-config.sh to /usr/local/bin
+  get_url:
+    url: "https://raw.githubusercontent.com/btaub/misc-scripts/master/get-EdgeSwitch-config.sh"
+    dest: "/usr/local/bin/get-EdgeSwitch-config.sh
+    owner: "root"
+    group: "root"
+    mode: "0755"
+

@@ -1,0 +1,144 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Unifi Linux Tools from https://github.com/stevejenkins/unifi-linux-utils to /usr/local/src
+  git:
+    repo: https://github.com/stevejenkins/unifi-linux-utils
+    dest: /usr/local/src/unifi-linux-utils
+    clone: yes
+    update: yes
+
+- name: Unifi API client  from https://github.com/Art-of-WiFi/UniFi-API-client to /usr/local/src
+  git:
+    repo: https://github.com/Art-of-WiFi/UniFi-API-client
+    dest: /usr/local/src/UniFi-API-client
+    clone: yes
+    update: yes
+
+# Edgerouter Backup Scripts
+- name: edgerouter-backup from https://github.com/tbyehl/edgerouter-backup to /usr/local/src
+  git:
+    repo: https://github.com/tbyehl/edgerouter-backup
+    dest: /usr/local/src/edgerouter-backup
+    clone: yes
+    update: yes
+
+- name: unifi-client from https://github.com/synccloudsoft/unifi-client to /usr/local/src
+  git:
+    repo: https://github.com/syncloudsoft/unifi-client
+    dest: /usr/local/src/unifi-client
+    clone: yes
+    update: yes
+
+- name: unifi2mqtt from https://github.com/hobyquaker/unifi2mqtt to /usr/local/src
+  git:
+    repo: https://github.com/hobbyquaker/unifi2mqtt
+    dest: /usr/local/src/unifi2mqtt
+    clone: yes
+    update: yes
+
+
+- name: ubiquiti-perl-modulet from https://github.com/mindc/ubiquiti to /usr/local/src
+  git:
+    repo: https://github.com/mindc/ubiquiti
+    dest: /usr/local/src/ubuquiti-perl-module
+    clone: yes
+    update: yes
+
+
+- name: check_unifi from https://github.com/msweetser/check_unifi to /usr/local/src
+  git:
+    repo: https://github.com/msweetser/check_unifi
+    dest: /usr/local/src/check_unifi
+    clone: yes
+    update: yes
+
+- name: sensu-plugins-ubuquiti from https://github.com/sensu-plugins/sensu-plugins-ubiquiti to /usr/local/src
+  git:
+    repo: https://github.com/sensu-plugins/sensu-plugins-ubiquiti
+    dest: /usr/local/src/sensu-plugins-ubiquiti
+    clone: yes
+    update: yes
+
+- name: WhosTheHog from https://github.com/declanwoods/WhosTheHog to /usr/local/src
+  git:
+    repo: https://github.com/declanwoods/WhosTheHog
+    dest: /usr/local/src/WhosTheHog
+    clone: yes
+    update: yes
+
+- name: monitoring-utilitites from https://github.com/WaterByWind/monitoring-utilities to /usr/local/src
+  git:
+    repo: https://github.com/WaterByWind/monitoring-utilities
+    dest: /usr/local/src/monitoring-utilities
+    clone: yes
+    update: yes
+
+- name: unifi-poller from https://github.com/davidnewhall/unifi-poller to /usr/local/src
+  git:
+    repo: https://github.com/davidnewhall/unifi-poller
+    dest: /usr/local/src/unifi-poller
+    clone: yes
+    update: yes
+
+- name: edgerouter-automation from https://github.com/oldsj/edgerouter-automation to /usr/local/src
+  git:
+    repo: https://github.com/oldsj/edgerouter-automation
+    dest: /usr/local/src/edgerouter-automation
+    clone: yes
+    update: yes
+
+- name: eap_proxy from https://github.com/jaysoffian/eap_proxy to /usr/local/src
+  git:
+    repo: https://github.com/jaysoffian/eap_proxy
+    dest: /usr/local/src/eap_proxy
+    clone: yes
+    update: yes
+
+- name: EdgeOS Setup Scripts  from https://github.com/brianredbeard/edgeos_setup to /usr/local/src
+  git:
+    repo: https://github.com/brianredbeard/edgeos_setup
+    dest: /usr/local/src/EdgeOS_Setup_Scripts
+    clone: yes
+    update: yes
+
+- name: UniFi Voucher Generator from https://github.com/davidmaitland/unifi-voucher-generator to /usr/local/src
+  git:
+    repo: https://github.com/davidmaitland/unifi-voucher-generator
+    dest: /usr/local/src/unifi-voucher-generator
+    clone: yes
+    update: yes
+
+- name: edgerouter-ansible from https://github.com/claytono/edgerouter-ansible to /usr/local/src
+  git:
+    repo: https://github.com/claytono/edgerouter-ansible
+    dest: /usr/local/src/edgerouter-ansible
+    clone: yes
+    update: yes
+
+- name: unifi-usg-kpn from https://github.com/basmeerman/unifi-usg-kpn to /usr/local/src
+  git:
+    repo: https://github.com/basmeerman/unifi-usg-kpn
+    dest: /usr/local/src/unifi-usg-kpn
+    clone: yes
+    update: yes
+
+- name: USG-DNS-ADDBLOCK from https://github.com/Ar0xA/USG-DNS-ADBLOCK to /usr/local/src
+  git:
+    repo: https://github.com/Ar0xA/USG-DNS-ADBLOCK
+    dest: /usr/local/src/USG-DNS-ADBLOCK
+    clone: yes
+    update: yes
+
+- name: EdgeOS-Blacklist from https://github.com/amarcu5/EdgeOS-Blacklist to /usr/local/src
+  git:
+    repo: https://github.com/amarcu5/EdgeOS-Blacklist
+    dest: /usr/local/src/EdgeOS-Blacklist
+    clone: yes
+    update: yes
+
+- name: blacklist from https://github.com/britannic/blacklist to /usr/local/src
+  git:
+    repo: https://github.com/britannic/blacklist
+    dest: /usr/local/src/EdgeOS-Blacklist
+    clone: yes
+    update: yes

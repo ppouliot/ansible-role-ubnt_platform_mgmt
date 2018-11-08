@@ -122,6 +122,7 @@ Here is a non-working  example of typical usage.
 ### Backup
 
 * [EdgeRouter to git repo backup scripts.](https://github.com/tbyehl/edgerouter-backup)
+* [Oxidized](https://github.com/ytti/oxidized)
 
 ### Monitoring & Alerting
 
