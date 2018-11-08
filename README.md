@@ -83,6 +83,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/amarcu5/EdgeOS-Blacklist](https://github.com/amarcu5/EdgeOS-Blacklist)
 * [https://github.com/britannic/blacklist](https://github.com/britannic/blacklist)
 * [https://github.com/Ar0xA/USG-DNS-ADBLOCK](https://github.com/Ar0xA/USG-DNS-ADBLOCK)
+* [https://bendews.com/posts/implement-dns-over-https/](https://bendews.com/posts/implement-dns-over-https/)
 
 ### VPN
 
