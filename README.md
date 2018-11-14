@@ -87,6 +87,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/j-c-m/ubnt-letsencrypt](https://github.com/j-c-m/ubnt-letsencrypt)
 * [https://github.com/neilalexander/vyatta-cjdns](https://github.com/neilalexander/vyatta-cjdns)
 * [https://github.com/bettermanbao/erx-shadowsocks-libev](https://github.com/bettermanbao/erx-shadowsocks-libev)
+* [https://github.com/cmur2/vyatta-sixxs](https://github.com/cmur2/vyatta-sixxs)
 
 ### VPN
 
