@@ -137,6 +137,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap](https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap)
 * [https://github.com/breakandinspect/graylog](https://github.com/breakandinspect/graylog)
 * [https://github.com/loganmarchione/graylog-edgerouter-lite](https://github.com/loganmarchione/graylog-edgerouter-lite)
+* [https://github.com/edoput/netjsonconfig-airos](https://github.com/edoput/netjsonconfig-airos)
 
 ### Configuration examples
 
