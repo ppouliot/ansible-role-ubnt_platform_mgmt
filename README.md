@@ -111,6 +111,7 @@ Here is a non-working  example of typical usage.
 
 ### Captive Portal/Wifi Addons
 * [https://github.com/davidmaitland/unifi-voucher-generator](https://github.com/davidmaitland/unifi-voucher-generator)
+* [https://gist.github.com/troyfontaine/43f4a978418b845cdbb117ffe1fd30e8](https://gist.github.com/troyfontaine/43f4a978418b845cdbb117ffe1fd30e8)
 
 ### Scripts
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
