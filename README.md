@@ -134,6 +134,7 @@ Here is a non-working  example of typical usage.
 * [Perl Module to output UBNT info ](https://github.com/mindc/ubiquiti/blob/master/lib/Ubiquiti.pm)
 * [https://github.com/mikeder/edgerouter-graylog-extractors](https://github.com/mikeder/edgerouter-graylog-extractors)
 * [https://github.com/lowfive/graylog-grok-edgerouter](https://github.com/lowfive/graylog-grok-edgerouter)
+* [https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap](https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap)
 
 ### Configuration examples
 
