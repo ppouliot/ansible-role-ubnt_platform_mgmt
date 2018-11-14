@@ -133,6 +133,7 @@ Here is a non-working  example of typical usage.
 * [Simple web server that connects to a Ubiquiti Edge Router to show who is using a substantial amount of data](https://github.com/declanwoods/WhosTheHog)
 * [Perl Module to output UBNT info ](https://github.com/mindc/ubiquiti/blob/master/lib/Ubiquiti.pm)
 * [https://github.com/mikeder/edgerouter-graylog-extractors](https://github.com/mikeder/edgerouter-graylog-extractors)
+* [https://github.com/lowfive/graylog-grok-edgerouter](https://github.com/lowfive/graylog-grok-edgerouter)
 
 ### Configuration examples
 
