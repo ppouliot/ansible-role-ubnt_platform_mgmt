@@ -116,7 +116,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/bsab/django-unifi-portal](https://github.com/bsab/django-unifi-portal)
 * [https://github.com/emanuelepaiano/espresso-portal](https://github.com/emanuelepaiano/espresso-portal)
 * [https://github.com/SEQUOIIA/unifi-proper-portal](https://github.com/SEQUOIIA/unifi-proper-portal)
-
+* [https://github.com/kaptk2/portal](https://github.com/kaptk2/portal)
 ### Scripts
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
 * [https://github.com/oldsj/edgerouter-automation](https://github.com/oldsj/edgerouter-automation)
