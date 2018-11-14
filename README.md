@@ -117,6 +117,8 @@ Here is a non-working  example of typical usage.
 * [https://github.com/emanuelepaiano/espresso-portal](https://github.com/emanuelepaiano/espresso-portal)
 * [https://github.com/SEQUOIIA/unifi-proper-portal](https://github.com/SEQUOIIA/unifi-proper-portal)
 * [https://github.com/kaptk2/portal](https://github.com/kaptk2/portal)
+* [http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip](http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip)
+
 ### Scripts
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
 * [https://github.com/oldsj/edgerouter-automation](https://github.com/oldsj/edgerouter-automation)
