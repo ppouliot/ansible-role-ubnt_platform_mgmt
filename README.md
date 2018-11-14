@@ -154,6 +154,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs](https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs)
 * [https://github.com/ekrunch/ubiquiti_unifi_configs](https://github.com/ekrunch/ubiquiti_unifi_configs)
 * [https://github.com/psaintemarie/unifi-bytel](https://github.com/psaintemarie/unifi-bytel)
+* [https://github.com/TimoDJatomika/EdgeRouter-Stuff](https://github.com/TimoDJatomika/EdgeRouter-Stuff)
 
 ## Contributors
 ------------
