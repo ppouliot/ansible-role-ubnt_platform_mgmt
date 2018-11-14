@@ -132,7 +132,7 @@ Here is a non-working  example of typical usage.
 * [Periodic monitoring of UBNT EdgeRouter metrics not otherwise available via SNMP and logging to InfluxDB/Grafana](https://github.com/WaterByWind/monitoring-utilities)
 * [Simple web server that connects to a Ubiquiti Edge Router to show who is using a substantial amount of data](https://github.com/declanwoods/WhosTheHog)
 * [Perl Module to output UBNT info ](https://github.com/mindc/ubiquiti/blob/master/lib/Ubiquiti.pm)
-*[https://bendews.com/posts/implement-dns-over-https/](https://bendews.com/posts/implement-dns-over-https/)
+* [https://bendews.com/posts/implement-dns-over-https/](https://bendews.com/posts/implement-dns-over-https/)
 
 ### Configuration examples
 
