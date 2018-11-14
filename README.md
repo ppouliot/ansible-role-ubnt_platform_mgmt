@@ -86,6 +86,7 @@ Here is a non-working  example of typical usage.
 * [https://bendews.com/posts/implement-dns-over-https/](https://bendews.com/posts/implement-dns-over-https/)
 * [https://github.com/j-c-m/ubnt-letsencrypt](https://github.com/j-c-m/ubnt-letsencrypt)
 * [https://github.com/neilalexander/vyatta-cjdns](https://github.com/neilalexander/vyatta-cjdns)
+* [https://github.com/bettermanbao/erx-shadowsocks-libev](https://github.com/bettermanbao/erx-shadowsocks-libev)
 
 ### VPN
 
