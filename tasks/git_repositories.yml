@@ -122,8 +122,8 @@
     clone: yes
     update: yes
 
-- name:
-  git: expresso-portal from https://github.com/emanuelepaiano/espresso-portal to /usr/local/src
+- name: expresso-portal from https://github.com/emanuelepaiano/espresso-portal to /usr/local/src
+  git:
     repo: https://github.com/emanuelepaiano/espresso-portal
     dest: /usr/local/src/expresso-portal
     clone: yes
