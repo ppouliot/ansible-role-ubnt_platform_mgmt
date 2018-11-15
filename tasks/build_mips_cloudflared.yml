@@ -1,0 +1,18 @@
+#!/usr/bin/env ansible-playbook
+---
+
+# Execute script which builds cloudfared for mips via a docker container.
+
+#- name: "Build Cloudflared for MIPS"
+#  script: ../files/build_mips_cloudflared.sh
+
+- name: Build Cloudflared for MIPs in Docker
+  docker_container:
+    name: myapp
+    image: golang
+    env:
+      GOOS: linux
+      GOARCH: mips
+    volumes:
+      - "$PWD":/usr/src/myapp
+    command: "go get -v github.com/cloudflare/cloudflared/cmd/cloudflared; GOOS=linux GOARCH=mips go build -v -x github.com/cloudflare/cloudflared/cmd/cloudflared"
