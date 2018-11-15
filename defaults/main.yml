@@ -6,6 +6,9 @@
 ubnt_ssh_authorized_key: ~/.ssh/id_ed25519.pub
 #ubnt_device_user_id: ubnt
 
+# Retrieve Community Code
+ubnt_community_code: True
+
 # Unifi Controller Facts
 # unifi_ctrl_url: https://192.168.1.2:8443
 # unifi_ctrl_user: admin
