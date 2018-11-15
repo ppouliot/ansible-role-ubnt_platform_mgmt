@@ -10,9 +10,10 @@
   docker_container:
     name: myapp
     image: golang
+    working_dir: /usr/src/myapp
     env:
       GOOS: linux
       GOARCH: mips
     volumes:
-      - "$PWD":/usr/src/myapp
+      - "$PWD:/usr/src/myapp"
     command: "go get -v github.com/cloudflare/cloudflared/cmd/cloudflared; GOOS=linux GOARCH=mips go build -v -x github.com/cloudflare/cloudflared/cmd/cloudflared"

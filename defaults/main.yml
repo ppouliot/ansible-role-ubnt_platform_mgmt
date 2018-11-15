@@ -4,6 +4,7 @@
 
 # Retrieve Community Code
 ubnt_community_code: True
+ubnt_ssh_passwd_auth: True
 
 # Unifi Controller Facts
 # unifi_ctrl_url: https://192.168.1.2:8443
