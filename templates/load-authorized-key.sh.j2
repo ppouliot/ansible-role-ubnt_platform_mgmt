@@ -8,4 +8,4 @@ $SHELL_API setupSession
 
 export vyatta_sbindir="/opt/vyatta/sbin"
 
-/opt/vyatta/sbin/vyatta-load-user-key.pl admin /config/local/authorized-ssh-key
+/opt/vyatta/sbin/vyatta-load-user-key.pl {{ ubnt_device_user_id }}  /config/local/authorized-ssh-key

@@ -16,8 +16,8 @@ A list features based on the research included here I'm hoping to implement.
 
 | Feature | Ansible | [UniFI CloudKey](https://www.ubnt.com/unifi/unifi-cloud-key/) | [USG4P](https://www.ubnt.com/unifi-routing/unifi-security-gateway-pro-4/) | [USG](https://www.ubnt.com/unifi-routing/usg/) | [EdgeRouterX](https://www.ubnt.com/edgemax/edgerouter-x/) |
 | --- | --- | --- | --- | --- | --- |
-| unifi_controller_facts | [library](https://github.com/ppouliot/ansible_module-unifi_controller_facts) | [*](tasks/all_unifi_controller_facts.yml) | | |
-| Install SSH Keys | [task](tasks/install_ssh_authorized_keys.yml) | untested | untested | untested| untested |
+| unifi_controller_facts | [ansible library](https://github.com/ppouliot/ansible_module-unifi_controller_facts) | [*](tasks/all_unifi_controller_facts.yml) | | |
+| Install SSH Keys | [ansible role](https://github.com/ppouliot/ansible-role-ubnt_device_bootstrap) | untested | tested | tested| tested |
 | SSH No Passwd Auth | task | | | | |
 | [LetsEncrypt](https://letsencrypt.org) | [task](tasks/letsencrypt_acme.yml) | | | | |
 | Get EdgeSwitch Config | [template](templates/get-EdgeSwitch-config.sh.j2) | n/a | n/a | n/a | untested |

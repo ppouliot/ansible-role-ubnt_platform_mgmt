@@ -2,8 +2,16 @@
 # tasks file for ppouliot.ubnt_platform_mgmt
 #
 
-- name: Create an Azure Service Principle
+- name: Execute All Unifi Controller Facts
   include_tasks: all_unifi_controller_facts.yml
   when:
     - inventory_hostname == "localhost"
     - unifi_ctrl_facts == True
+
+- name: Install SSH Authorized Keys
+
+  # tasks file for ppouliot.ubnt_bootstrap
+- name: Install SSH Authorized Keys
+  include_tasks: install_ssh_authorized_keys.yml
+  when:
+    - ansible_connection == "ssh"
