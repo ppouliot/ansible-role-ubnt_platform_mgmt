@@ -1,11 +1,31 @@
 #!/usr/bin/env ansible-playbook
 ---
 
-- name: get-EdgeSwitch-config.sh from https://raw.githubusercontent.com/btaub/misc-scripts/master/get-EdgeSwitch-config.sh to /usr/local/bin
+- name: Creating script get-EdgeSwitch-config.sh from https://raw.githubusercontent.com/btaub/misc-scripts/master/get-EdgeSwitch-config.sh to /usr/local/bin
   get_url:
     url: "https://raw.githubusercontent.com/btaub/misc-scripts/master/get-EdgeSwitch-config.sh"
-    dest: "/usr/local/bin/get-EdgeSwitch-config.sh
+    dest: "/usr/local/bin/get-EdgeSwitch-config.sh"
     owner: "root"
     group: "root"
     mode: "0755"
+
+- name: Creating document Customizing_The_UniFi_Controller_v5_Hot_Spot_Portal.md from https://gist.github.com/troyfontaine/43f4a978418b845cdbb117ffe1fd30e8/raw/edf972540be079717c8839dd37a7ccd1ddf62d4b/README.md
+  get_url:
+    url: "https://gist.github.com/troyfontaine/43f4a978418b845cdbb117ffe1fd30e8/raw/edf972540be079717c8839dd37a7ccd1ddf62d4b/README.md"
+    dest: "/usr/local/src/Customizing_The_UniFi_Controller_v5_Hot_Spot_Portal.md"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+
+- name: http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip
+  get_url:
+    url: "http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip"
+    dest: "/usr/local/src/portal_sample_paypal.zip"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+
+
+
+
 

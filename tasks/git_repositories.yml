@@ -22,6 +22,13 @@
     clone: yes
     update: yes
 
+- name: Oxidized from https://github.com/ytti/oxidized to /usr/local/src
+  git:
+    repo: https://github.com/ytti/oxidized
+    dest: /usr/local/src/oxidized
+    clone: yes
+    update: yes
+
 - name: unifi-client from https://github.com/synccloudsoft/unifi-client to /usr/local/src
   git:
     repo: https://github.com/syncloudsoft/unifi-client
@@ -108,6 +115,35 @@
     clone: yes
     update: yes
 
+- name: django-unifi-portal from https://github.com/bsab/django-unifi-portal to /usr/local/src  
+  git:
+    repo: https://github.com/bsab/django-unifi-portal
+    dest: /usr/local/src/django-unifi-portal
+    clone: yes
+    update: yes
+
+- name:
+  git: expresso-portal from https://github.com/emanuelepaiano/espresso-portal to /usr/local/src
+    repo: https://github.com/emanuelepaiano/espresso-portal
+    dest: /usr/local/src/expresso-portal
+    clone: yes
+    update: yes
+
+- name: unifi-proper-portal from https://github.com/SEQUOIIA/unifi-proper-portal to /usr/local/src
+  git:
+    repo: https://github.com/SEQUOIIA/unifi-proper-portal
+    dest: /usr/local/src/unifi-proper-portal
+    clone: yes
+    update: yes
+
+- name: kaptk2-portal from https://github.com/kaptk2/portal to /usr/local/src
+  git:
+    repo: https://github.com/kaptk2/portal
+    dest: /usr/local/src/kaptk2i-portal
+    clone: yes
+    update: yes
+
+
 - name: edgerouter-ansible from https://github.com/claytono/edgerouter-ansible to /usr/local/src
   git:
     repo: https://github.com/claytono/edgerouter-ansible
@@ -139,7 +175,36 @@
 - name: blacklist from https://github.com/britannic/blacklist to /usr/local/src
   git:
     repo: https://github.com/britannic/blacklist
-    dest: /usr/local/src/EdgeOS-Blacklist
+    dest: /usr/local/src/blacklist
+    clone: yes
+    update: yes
+
+- name: ubnt-letsencrypt from https://github.com/ubnt-letsencryptt to /usr/local/src
+  git:
+    repo: https://github.com/j-c-m/ubnt-letsencrypt
+    dest: /usr/local/src/ubnt-letsencrypt
+    clone: yes
+    update: yes
+
+- name: vyatta-cjdns from https://github.com/neilalexander/vyatta-cjdns to /usr/local/src
+  git:
+    repo: https://github.com/neilalexander/vyatta-cjdns
+    dest: /usr/local/src/vyatta-cjdns
+    clone: yes
+    update: yes
+
+- name: vyatta-sixxs from https://github.com/cmur2/vyatta-sixxs to /usr/local/src
+  git:
+    repo: https://github.com/cmur2/vyatta-sixxs
+    dest: /usr/local/src/vyatta-sixxs
+    clone: yes
+    update: yes
+
+
+- name: erx-shadowsocks-libev from https://github.com/bettermanbao/erx-shadowsocks-libev to /usr/local/src
+  git:
+    repo: https://github.com/bettermanbao/erx-shadowsocks-libev
+    dest: /usr/local/src/erx-shadowsocks-libev
     clone: yes
     update: yes
 
@@ -150,11 +215,46 @@
     clone: yes
     update: yes
 
-
 - name: ubiquiti_unifi_configs from https://github.com/ekrunch/ubiquiti_unifi_configs to /usr/local/src
   git:
     repo: https://github.com/ekrunch/ubiquiti_unifi_configs
     dest: /usr/local/src/ubiquiti_unifi_configs
+    clone: yes
+    update: yes
+
+- name: EdgeRouter-Stuff from https://github.com/TimoDJatomika/EdgeRouter-Stuff to /usr/local/src
+  git:
+    repo: https://github.com/TimoDJatomika/EdgeRouter-Stuff
+    dest: /usr/local/src/EdgeRouter-Stuff
+    clone: yes
+    update: yes
+
+- name: edgerouter-graylog-extractors from https://github.com/mikeder/edgerouter-graylog-extractors to /usr/local/src
+  git:
+    repo: https://github.com/mikeder/edgerouter-graylog-extractors
+    dest: /usr/local/src/edgerouter-graylog-extractors
+    clone: yes
+    update: yes
+
+- name: graylog-grok-edgerouter from https://github.com/lowfive/graylog-grok-edgerouter to /usr/local/src
+  git:
+    repo: https://github.com/lowfive/graylog-grok-edgerouter
+    dest: /usr/local/src/graylog-grok-edgerouter
+    clone: yes
+    update: yes
+
+- name: graylog-guide-ubiquity-unify-ap from https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap to /usr/local/src
+  git:
+    repo: https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap
+    dest: /usr/local/src/graylog-guide-ubiquity-unify-ap
+    clone: yes
+    update: yes
+
+
+- name: GRAYLOG_Ubiquiti_Extractors.json from https://github.com/breakandinspect/graylog to /usr/local/src/graylog-json-extractors
+  git:
+    repo: https://github.com/breakandinspect/graylog
+    dest: /usr/local/src/graylog-json-extractors
     clone: yes
     update: yes
 
@@ -164,3 +264,25 @@
     dest: /usr/local/src/unifi-bytel
     clone: yes
     update: yes
+
+- name: graylog-edgerouter-lite from https://github.com/loganmarchione/graylog-edgerouter-lite to /usr/local/src
+  git:
+    repo: https://github.com/loganmarchione/graylog-edgerouter-lite
+    dest: /usr/local/src/graylog-edgerouter-lite
+    clone: yes
+    update: yes
+
+- name: netjsonconfig-airos from https://github.com/edoput/netjsonconfig-airos to /usr/local/src
+  git:
+    repo: https://github.com/edoput/netjsonconfig-airos
+    dest: /usr/local/src/netjsonconfig-airos
+    clone: yes
+    update: yes
+
+- name: grafana-dashboards from https://github.com/WaterByWind/grafana-dashboards to /usr/local/src
+  git:
+    repo: https://github.com/WaterByWind/grafana-dashboards
+    dest: /usr/local/src/grafana-dashboards
+    clone: yes
+    update: yes
+

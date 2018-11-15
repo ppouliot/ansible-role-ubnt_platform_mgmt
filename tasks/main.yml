@@ -8,10 +8,19 @@
     - inventory_hostname == "localhost"
     - unifi_ctrl_facts == True
 
-- name: Install SSH Authorized Keys
-
-  # tasks file for ppouliot.ubnt_bootstrap
-- name: Install SSH Authorized Keys
-  include_tasks: install_ssh_authorized_keys.yml
+- name: Load all curated Unifi Code from Git Repositories to /usr/local/src
+  include_tasks: git_repositories.yml
   when:
-    - ansible_connection == "ssh"
+    - inventory_hostname == "localhost"
+    - ubnt_community_code == True
+
+- name: Load all curated Unifi Code from Remote files
+  include_tasks: remote_files.yml
+  when:
+    - inventory_hostname == "localhost"
+    - ubnt_community_code == True
+
+- name: Build Cloudflared for MIPs
+  include_tasks: build_mips_cloudflared.yml
+  when:
+    - inventory_hostname == "localhost"
