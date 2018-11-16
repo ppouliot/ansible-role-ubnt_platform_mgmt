@@ -17,6 +17,14 @@
     group: "root"
     mode: "0755"
 
+- name: Creating document Customizing_The_UniFi_Controller_v5_Hot_Spot_Portal.md from https://gist.github.com/troyfontaine/43f4a978418b845cdbb117ffe1fd30e8/raw/edf972540be079717c8839dd37a7ccd1ddf62d4b/README.md
+  get_url:
+    url: "https://gist.github.com/bufadu/0c3ba661c141a2176cd048f65430ae8d#file-howto_bgp_ecmp_load_balancing-md"
+    dest: "/usr/local/src/howto_bgp_ecmp_load_balancing.md"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+
 - name: http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip
   get_url:
     url: "http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip"

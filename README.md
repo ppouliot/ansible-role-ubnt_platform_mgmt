@@ -99,7 +99,7 @@ Here is a non-working  example of typical usage.
 
 * [https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-PRO-4-amp-MPLS-Outbound-routing-works-but-unable-to-reach/td-p/2450723](https://community.ubnt.com/t5/UniFi-Routing-Switching/USG-PRO-4-amp-MPLS-Outbound-routing-works-but-unable-to-reach/td-p/2450723)
 * [https://github.com/basmeerman/unifi-usg-kpn](https://github.com/basmeerman/unifi-usg-kpn)
-
+* [How to build a load balancer with BGP and ECMP](https://gist.github.com/bufadu/0c3ba661c141a2176cd048f65430ae8d)
 
 ### Cloud DNS
 
