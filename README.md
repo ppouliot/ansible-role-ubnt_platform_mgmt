@@ -34,54 +34,6 @@ A list features based on the research included here I'm hoping to implement.
 ## Role Variables
 ------------------
 
-### Building Cloudflared for Unifi USG
-
-```
-docker run \
-  --rm \
-  -v ${PWD}:/usr/src/myapp \
-  -w /usr/src/myapp \
-  -e GOOS=linux \
-  -e GOARCH=mips64 \
-  golang bash -c "go get -v github.com/cloudflare/cloudflared/cmd/cloudflared ; GOOS=linux GOARCH=mips64 go build -ldflags='-s -w' -v -x github.com/cloudflare/cloudflared/cmd/cloudflared "
-```
-
-### Building Cloudflared for Unifi EdgeRouterX
-
-```
-docker run \
-  --rm \
-  -v ${PWD}:/usr/src/myapp \
-  -w /usr/src/myapp \
-  -e GOOS=linux \
-  -e GOARCH=mipsle \
-  golang bash -c "go get -v github.com/cloudflare/cloudflared/cmd/cloudflared ; GOOS=linux GOARCH=mipsle go build -ldflags='-s -w' -v -x github.com/cloudflare/cloudflared/cmd/cloudflared"
-```
-
-### Building Pixiecore for Unifi USG
-
-```
-docker run \
-  --rm \
-  -v ${PWD}:/usr/src/myapp \
-  -w /usr/src/myapp \
-  -e GOOS=linux \
-  -e GOARCH=mips64 \
-  golang bash -c "go get -v go.universe.tf/netboot/cmd/pixiecore ; GOOS=linux GOARCH=mips64 go build -ldflags='-s -w' -v -x go.universe.tf/netboot/cmd/pixiecore"
-```
-
-### Building Pixiecore for Unifi EdgeRouterX
-
-```
-docker run \
-  --rm \
-  -v ${PWD}:/usr/src/myapp \
-  -w /usr/src/myapp \
-  -e GOOS=linux \
-  -e GOARCH=mipsle \
-  golang bash -c "go get -v go.universe.tf/netboot/cmd/pixiecore ; GOOS=linux GOARCH=mipsle go build -ldflags='-s -w' -v -x go.universe.tf/netboot/cmd/pixiecore"
-```
-
 ### Install SSH Authorized Keys
 Provide the location for the SSH keys that will be installed for SSH key based authentication to the ubnt device.
 
@@ -108,6 +60,58 @@ aws_route53_exclude_host: nothisone.pouliot.net
 ### Get EdgeSwitch Config
 Script template to get ERX config.
 * [get-EdgeSwitch-config.sh](templates/get-EdgeSwitch-config.sh.j2)
+
+## Cloudflared on Unifi/EdgeRouter Devices
+
+### Building Cloudflared for Unifi USG
+
+```
+docker run \
+  --rm \
+  -v ${PWD}:/usr/src/myapp \
+  -w /usr/src/myapp \
+  -e GOOS=linux \
+  -e GOARCH=mips64 \
+  golang bash -c "go get -v github.com/cloudflare/cloudflared/cmd/cloudflared ; GOOS=linux GOARCH=mips64 go build -ldflags='-s -w' -v -x github.com/cloudflare/cloudflared/cmd/cloudflared "
+```
+
+### Building Cloudflared for Unifi EdgeRouterX
+
+```
+docker run \
+  --rm \
+  -v ${PWD}:/usr/src/myapp \
+  -w /usr/src/myapp \
+  -e GOOS=linux \
+  -e GOARCH=mipsle \
+  golang bash -c "go get -v github.com/cloudflare/cloudflared/cmd/cloudflared ; GOOS=linux GOARCH=mipsle go build -ldflags='-s -w' -v -x github.com/cloudflare/cloudflared/cmd/cloudflared"
+```
+
+## Pixiecore on Unifi/Edgerouter Devices
+
+### Building Pixiecore for Unifi USG
+
+```
+docker run \
+  --rm \
+  -v ${PWD}:/usr/src/myapp \
+  -w /usr/src/myapp \
+  -e GOOS=linux \
+  -e GOARCH=mips64 \
+  golang bash -c "go get -v go.universe.tf/netboot/cmd/pixiecore ; GOOS=linux GOARCH=mips64 go build -ldflags='-s -w' -v -x go.universe.tf/netboot/cmd/pixiecore"
+```
+
+### Building Pixiecore for Unifi EdgeRouterX
+
+```
+docker run \
+  --rm \
+  -v ${PWD}:/usr/src/myapp \
+  -w /usr/src/myapp \
+  -e GOOS=linux \
+  -e GOARCH=mipsle \
+  golang bash -c "go get -v go.universe.tf/netboot/cmd/pixiecore ; GOOS=linux GOARCH=mipsle go build -ldflags='-s -w' -v -x go.universe.tf/netboot/cmd/pixiecore"
+```
 
 ## Example Playbook
 Here is a non-working  example of typical usage.
