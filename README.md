@@ -202,6 +202,9 @@ Here is a non-working  example of typical usage.
 * [https://github.com/loganmarchione/graylog-edgerouter-lite](https://github.com/loganmarchione/graylog-edgerouter-lite)
 * [https://github.com/edoput/netjsonconfig-airos](https://github.com/edoput/netjsonconfig-airos)
 * [https://github.com/WaterByWind/grafana-dashboards](https://github.com/WaterByWind/grafana-dashboards)
+* [https://github.com/zbx-sadman/unifi_miner](https://github.com/zbx-sadman/unifi_miner)
+* [https://github.com/zbx-sadman/unifi_proxy](https://github.com/zbx-sadman/unifi_proxy)
+* [https://github.com/mdlayher/unifi_exporter](https://github.com/mdlayher/unifi_exporter)
 
 ### Configuration examples & Documentation
 
