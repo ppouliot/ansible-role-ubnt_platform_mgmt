@@ -164,6 +164,8 @@ Here is a non-working  example of typical usage.
 * [https://github.com/tbyehl/edgerouter-backup](https://github.com/tbyehl/edgerouter-backup)
 * [https://github.com/syncloudsoft/unifi-client](https://github.com/syncloudsoft/unifi-client)
 * [https://github.com/hobbyquaker/unifi2mqtt](https://github.com/hobbyquaker/unifi2mqtt)
+* [https://github.com/jens-maus/node-unifi](https://github.com/jens-maus/node-unifi)
+* [https://github.com/KoenZomers/UniFiApi](https://github.com/KoenZomers/UniFiApi)
 
 ### Captive Portal/Wifi Addons
 * [https://github.com/davidmaitland/unifi-voucher-generator](https://github.com/davidmaitland/unifi-voucher-generator)
@@ -181,6 +183,8 @@ Here is a non-working  example of typical usage.
 * [kenmoini/unifi_controller_facts](https://github.com/kenmoini/ansible_modules/tree/master/unifi_controller_facts)
 * [https://github.com/btaub/misc-scripts/blob/master/get-EdgeSwitch-config.sh](https://github.com/btaub/misc-scripts/blob/master/get-EdgeSwitch-config.sh)
 * [https://github.com/jaysoffian/eap_proxy](https://github.com/jaysoffian/eap_proxy)
+* [https://github.com/ubiquiti/eot-controller](https://github.com/ubiquiti/eot-controller)
+* [https://github.com/Enatec/UniFiTooling](https://github.com/Enatec/UniFiTooling)
 
 ### Backup
 
@@ -205,6 +209,8 @@ Here is a non-working  example of typical usage.
 * [https://github.com/zbx-sadman/unifi_miner](https://github.com/zbx-sadman/unifi_miner)
 * [https://github.com/zbx-sadman/unifi_proxy](https://github.com/zbx-sadman/unifi_proxy)
 * [https://github.com/mdlayher/unifi_exporter](https://github.com/mdlayher/unifi_exporter)
+* [https://github.com/caglar10ur/elk-usg](https://github.com/caglar10ur/elk-usg)
+* [https://github.com/custom-components/sensor.unifigateway](https://github.com/custom-components/sensor.unifigateway)
 
 ### Configuration examples & Documentation
 
