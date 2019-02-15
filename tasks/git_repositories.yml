@@ -3,14 +3,14 @@
 - name: Unifi Linux Tools from https://github.com/stevejenkins/unifi-linux-utils to {{ community_sources }}
   git:
     repo: https://github.com/stevejenkins/unifi-linux-utils
-    dest: {{ community_sources }}/unifi-linux-utils
+    dest: "{{ community_sources }}/unifi-linux-utils"
     clone: yes
     update: yes
 
 - name: Unifi API client  from https://github.com/Art-of-WiFi/UniFi-API-client to {{ community_sources }}
   git:
     repo: https://github.com/Art-of-WiFi/UniFi-API-client
-    dest: {{ community_sources }}/UniFi-API-client
+    dest: "{{ community_sources }}/UniFi-API-client"
     clone: yes
     update: yes
 
@@ -18,28 +18,28 @@
 - name: edgerouter-backup from https://github.com/tbyehl/edgerouter-backup to {{ community_sources }}
   git:
     repo: https://github.com/tbyehl/edgerouter-backup
-    dest: {{ community_sources }}/edgerouter-backup
+    dest: "{{ community_sources }}/edgerouter-backup"
     clone: yes
     update: yes
 
 - name: Oxidized from https://github.com/ytti/oxidized to {{ community_sources }}
   git:
     repo: https://github.com/ytti/oxidized
-    dest: {{ community_sources }}/oxidized
+    dest: "{{ community_sources }}/oxidized"
     clone: yes
     update: yes
 
 - name: unifi-client from https://github.com/synccloudsoft/unifi-client to {{ community_sources }}
   git:
     repo: https://github.com/syncloudsoft/unifi-client
-    dest: {{ community_sources }}/unifi-client
+    dest: "{{ community_sources }}/unifi-client"
     clone: yes
     update: yes
 
 - name: unifi2mqtt from https://github.com/hobyquaker/unifi2mqtt to {{ community_sources }}
   git:
     repo: https://github.com/hobbyquaker/unifi2mqtt
-    dest: {{ community_sources }}/unifi2mqtt
+    dest: "{{ community_sources }}/unifi2mqtt"
     clone: yes
     update: yes
 
@@ -47,7 +47,7 @@
 - name: ubiquiti-perl-modulet from https://github.com/mindc/ubiquiti to {{ community_sources }}
   git:
     repo: https://github.com/mindc/ubiquiti
-    dest: {{ community_sources }}/ubuquiti-perl-module
+    dest: "{{ community_sources }}/ubuquiti-perl-module"
     clone: yes
     update: yes
 
@@ -55,63 +55,63 @@
 - name: check_unifi from https://github.com/msweetser/check_unifi to {{ community_sources }}
   git:
     repo: https://github.com/msweetser/check_unifi
-    dest: {{ community_sources }}/check_unifi
+    dest: "{{ community_sources }}/check_unifi"
     clone: yes
     update: yes
 
 - name: sensu-plugins-ubuquiti from https://github.com/sensu-plugins/sensu-plugins-ubiquiti to {{ community_sources }}
   git:
     repo: https://github.com/sensu-plugins/sensu-plugins-ubiquiti
-    dest: {{ community_sources }}/sensu-plugins-ubiquiti
+    dest: "{{ community_sources }}/sensu-plugins-ubiquiti"
     clone: yes
     update: yes
 
 - name: WhosTheHog from https://github.com/declanwoods/WhosTheHog to {{ community_sources }}
   git:
     repo: https://github.com/declanwoods/WhosTheHog
-    dest: {{ community_sources }}/WhosTheHog
+    dest: "{{ community_sources }}/WhosTheHog"
     clone: yes
     update: yes
 
 - name: monitoring-utilitites from https://github.com/WaterByWind/monitoring-utilities to {{ community_sources }}
   git:
     repo: https://github.com/WaterByWind/monitoring-utilities
-    dest: {{ community_sources }}/monitoring-utilities
+    dest: "{{ community_sources }}/monitoring-utilities"
     clone: yes
     update: yes
 
 - name: unifi-poller from https://github.com/davidnewhall/unifi-poller to {{ community_sources }}
   git:
     repo: https://github.com/davidnewhall/unifi-poller
-    dest: {{ community_sources }}/unifi-poller
+    dest: "{{ community_sources }}/unifi-poller"
     clone: yes
     update: yes
 
 - name: edgerouter-automation from https://github.com/oldsj/edgerouter-automation to {{ community_sources }}
   git:
     repo: https://github.com/oldsj/edgerouter-automation
-    dest: {{ community_sources }}/edgerouter-automation
+    dest: "{{ community_sources }}/edgerouter-automation"
     clone: yes
     update: yes
 
 - name: eap_proxy from https://github.com/jaysoffian/eap_proxy to {{ community_sources }}
   git:
     repo: https://github.com/jaysoffian/eap_proxy
-    dest: {{ community_sources }}/eap_proxy
+    dest: "{{ community_sources }}/eap_proxy"
     clone: yes
     update: yes
 
 - name: EdgeOS Setup Scripts  from https://github.com/brianredbeard/edgeos_setup to {{ community_sources }}
   git:
     repo: https://github.com/brianredbeard/edgeos_setup
-    dest: {{ community_sources }}/EdgeOS_Setup_Scripts
+    dest: "{{ community_sources }}/EdgeOS_Setup_Scripts"
     clone: yes
     update: yes
 
 - name: edgerouter-ansible from https://github.com/claytono/edgerouter-ansible to {{ community_sources }}
   git:
     repo: https://github.com/claytono/edgerouter-ansible
-    dest: {{ community_sources }}/edgerouter-ansible
+    dest: "{{ community_sources }}/edgerouter-ansible"
     clone: yes
     update: yes
 
@@ -119,35 +119,35 @@
 - name: UniFi Voucher Generator from https://github.com/davidmaitland/unifi-voucher-generator to {{ community_sources }}
   git:
     repo: https://github.com/davidmaitland/unifi-voucher-generator
-    dest: {{ community_sources }}/unifi-voucher-generator
+    dest: "{{ community_sources }}/unifi-voucher-generator"
     clone: yes
     update: yes
 
 - name: django-unifi-portal from https://github.com/bsab/django-unifi-portal to {{ community_sources }}  
   git:
     repo: https://github.com/bsab/django-unifi-portal
-    dest: {{ community_sources }}/django-unifi-portal
+    dest: "{{ community_sources }}/django-unifi-portal"
     clone: yes
     update: yes
 
 - name: expresso-portal from https://github.com/emanuelepaiano/espresso-portal to {{ community_sources }}
   git:
     repo: https://github.com/emanuelepaiano/espresso-portal
-    dest: {{ community_sources }}/expresso-portal
+    dest: "{{ community_sources }}/expresso-portal"
     clone: yes
     update: yes
 
 - name: unifi-proper-portal from https://github.com/SEQUOIIA/unifi-proper-portal to {{ community_sources }}
   git:
     repo: https://github.com/SEQUOIIA/unifi-proper-portal
-    dest: {{ community_sources }}/unifi-proper-portal
+    dest: "{{ community_sources }}/unifi-proper-portal"
     clone: yes
     update: yes
 
 - name: kaptk2-portal from https://github.com/kaptk2/portal to {{ community_sources }}
   git:
     repo: https://github.com/kaptk2/portal
-    dest: {{ community_sources }}/kaptk2i-portal
+    dest: "{{ community_sources }}/kaptk2i-portal"
     clone: yes
     update: yes
 
@@ -155,21 +155,21 @@
 - name: USG-DNS-ADDBLOCK from https://github.com/Ar0xA/USG-DNS-ADBLOCK to {{ community_sources }}
   git:
     repo: https://github.com/Ar0xA/USG-DNS-ADBLOCK
-    dest: {{ community_sources }}/USG-DNS-ADBLOCK
+    dest: "{{ community_sources }}/USG-DNS-ADBLOCK"
     clone: yes
     update: yes
 
 - name: EdgeOS-Blacklist from https://github.com/amarcu5/EdgeOS-Blacklist to {{ community_sources }}
   git:
     repo: https://github.com/amarcu5/EdgeOS-Blacklist
-    dest: {{ community_sources }}/EdgeOS-Blacklist
+    dest: "{{ community_sources }}/EdgeOS-Blacklist"
     clone: yes
     update: yes
 
 - name: blacklist from https://github.com/britannic/blacklist to {{ community_sources }}
   git:
     repo: https://github.com/britannic/blacklist
-    dest: {{ community_sources }}/blacklist
+    dest: "{{ community_sources }}/blacklist"
     clone: yes
     update: yes
 
@@ -177,14 +177,14 @@
 - name: ubnt-letsencrypt from https://github.com/ubnt-letsencryptt to {{ community_sources }}
   git:
     repo: https://github.com/j-c-m/ubnt-letsencrypt
-    dest: {{ community_sources }}/ubnt-letsencrypt
+    dest: "{{ community_sources }}/ubnt-letsencrypt"
     clone: yes
     update: yes
 
 - name: vyatta-cjdns from https://github.com/neilalexander/vyatta-cjdns to {{ community_sources }}
   git:
     repo: https://github.com/neilalexander/vyatta-cjdns
-    dest: {{ community_sources }}/vyatta-cjdns
+    dest: "{{ community_sources }}/vyatta-cjdns"
     clone: yes
     update: yes
 
@@ -192,14 +192,14 @@
 - name: vyatta-sixxs from https://github.com/cmur2/vyatta-sixxs to {{ community_sources }}
   git:
     repo: https://github.com/cmur2/vyatta-sixxs
-    dest: {{ community_sources }}/vyatta-sixxs
+    dest: "{{ community_sources }}/vyatta-sixxs"
     clone: yes
     update: yes
 
 - name: erx-shadowsocks-libev from https://github.com/bettermanbao/erx-shadowsocks-libev to {{ community_sources }}
   git:
     repo: https://github.com/bettermanbao/erx-shadowsocks-libev
-    dest: {{ community_sources }}/erx-shadowsocks-libev
+    dest: "{{ community_sources }}/erx-shadowsocks-libev"
     clone: yes
     update: yes
 
@@ -207,35 +207,35 @@
 - name: unifi-bytel from https://github.com/psaintemarie/unifi-bytel to {{ community_sources }}
   git:
     repo: https://github.com/psaintemarie/unifi-bytel
-    dest: {{ community_sources }}/unifi-bytel
+    dest: "{{ community_sources }}/unifi-bytel"
     clone: yes
     update: yes
 
 - name: UBNT-EdgeRouter-Example-Configs from https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs to {{ community_sources }}
   git:
     repo: https://github.com/stevejenkins/UBNT-EdgeRouter-Example-Configs
-    dest: {{ community_sources }}/UBNT-EdgeRouter-Example-Configs
+    dest: "{{ community_sources }}/UBNT-EdgeRouter-Example-Configs"
     clone: yes
     update: yes
 
 - name: ubiquiti_unifi_configs from https://github.com/ekrunch/ubiquiti_unifi_configs to {{ community_sources }}
   git:
     repo: https://github.com/ekrunch/ubiquiti_unifi_configs
-    dest: {{ community_sources }}/ubiquiti_unifi_configs
+    dest: "{{ community_sources }}/ubiquiti_unifi_configs"
     clone: yes
     update: yes
 
 - name: EdgeRouter-Stuff from https://github.com/TimoDJatomika/EdgeRouter-Stuff to {{ community_sources }}
   git:
     repo: https://github.com/TimoDJatomika/EdgeRouter-Stuff
-    dest: {{ community_sources }}/EdgeRouter-Stuff
+    dest: "{{ community_sources }}/EdgeRouter-Stuff"
     clone: yes
     update: yes
 
 - name: unifi-usg-kpn from https://github.com/basmeerman/unifi-usg-kpn to {{ community_sources }}
   git:
     repo: https://github.com/basmeerman/unifi-usg-kpn
-    dest: {{ community_sources }}/unifi-usg-kpn
+    dest: "{{ community_sources }}/unifi-usg-kpn"
     clone: yes
     update: yes
 
@@ -244,21 +244,21 @@
 - name: edgerouter-graylog-extractors from https://github.com/mikeder/edgerouter-graylog-extractors to {{ community_sources }}
   git:
     repo: https://github.com/mikeder/edgerouter-graylog-extractors
-    dest: {{ community_sources }}/edgerouter-graylog-extractors
+    dest: "{{ community_sources }}/edgerouter-graylog-extractors"
     clone: yes
     update: yes
 
 - name: graylog-grok-edgerouter from https://github.com/lowfive/graylog-grok-edgerouter to {{ community_sources }}
   git:
     repo: https://github.com/lowfive/graylog-grok-edgerouter
-    dest: {{ community_sources }}/graylog-grok-edgerouter
+    dest: "{{ community_sources }}/graylog-grok-edgerouter"
     clone: yes
     update: yes
 
 - name: graylog-guide-ubiquity-unify-ap from https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap to {{ community_sources }}
   git:
     repo: https://github.com/Graylog2/graylog-guide-ubiquity-unify-ap
-    dest: {{ community_sources }}/graylog-guide-ubiquity-unify-ap
+    dest: "{{ community_sources }}/graylog-guide-ubiquity-unify-ap"
     clone: yes
     update: yes
 
@@ -266,27 +266,90 @@
 - name: GRAYLOG_Ubiquiti_Extractors.json from https://github.com/breakandinspect/graylog to {{ community_sources }}/graylog-json-extractors
   git:
     repo: https://github.com/breakandinspect/graylog
-    dest: {{ community_sources }}/graylog-json-extractors
+    dest: "{{ community_sources }}/graylog-json-extractors"
     clone: yes
     update: yes
 
 - name: graylog-edgerouter-lite from https://github.com/loganmarchione/graylog-edgerouter-lite to {{ community_sources }}
   git:
     repo: https://github.com/loganmarchione/graylog-edgerouter-lite
-    dest: {{ community_sources }}/graylog-edgerouter-lite
+    dest: "{{ community_sources }}/graylog-edgerouter-lite"
     clone: yes
     update: yes
 
 - name: netjsonconfig-airos from https://github.com/edoput/netjsonconfig-airos to {{ community_sources }}
   git:
     repo: https://github.com/edoput/netjsonconfig-airos
-    dest: {{ community_sources }}/netjsonconfig-airos
+    dest: "{{ community_sources }}/netjsonconfig-airos"
     clone: yes
     update: yes
 
 - name: grafana-dashboards from https://github.com/WaterByWind/grafana-dashboards to {{ community_sources }}
   git:
     repo: https://github.com/WaterByWind/grafana-dashboards
-    dest: {{ community_sources }}/grafana-dashboards
+    dest: "{{ community_sources }}/grafana-dashboards"
+    clone: yes
+    update: yes
+
+- name: node-unifi from https://github.com/jens-maus/node-unifio to {{ community_sources }}
+  git:
+    repo: https://github.com/jens-maus/node-unifi
+    dest: "{{ community_sources }}/node-unifi"
+    clone: yes
+    update: yes
+
+- name: UniFiApi from https://github.com/KenZomers/UniFiApi to {{ community_sources }}
+  git:
+    repo: https://github.com/KoenZomers/UniFiApi
+    dest: "{{ community_sources }}/UniFiApi"
+    clone: yes
+    update: yes
+
+- name: eot-controller from https://github.com/ubiquiti/eot-controller to {{ community_sources }}
+  git: 
+    repo: https://github.com/ubiquiti/eot-controller
+    dest: "{{ community_sources }}/eot-controller"
+    clone: yes
+    update: yes
+
+- name: UniFiTooling from https://github.com/Enatec/UniFiTooling to {{ community_sources }}
+  git: 
+    repo: https://github.com/Enatec/UniFiTooling
+    dest: "{{ community_sources }}/UniFiTooling"
+    clone: yes
+    update: yes
+
+- name: elk-usg from https://github.com/caglar10ur/elk-usg to {{ community_sources }}
+  git: 
+    repo: https://github.com/caglar10ur/elk-usg
+    dest: "{{ community_sources }}/elk-usg"
+    clone: yes
+    update: yes
+
+- name: sensor.unifigateway from https://github.com/custom-components/sensor.unifigateway to {{ community_sources }}
+  git: 
+    repo: https://github.com/custom-components/sensor.unifigateway
+    dest: "{{ community_sources }}/sensor.unifigateway"
+    clone: yes
+    update: yes
+
+- name: unifi_miner from https://github.com/zbx-sadman/unifi_minerto {{ community_sources }}
+  git: 
+    repo: https://github.com/zbx-sadman/unifi_miner
+    dest: "{{ community_sources }}/unifi_miner"
+    clone: yes
+    update: yes
+
+- name: unifi_proxy https://github.com/zbx-sadman/unifi_proxy to {{ community_sources }}
+  git: 
+    repo: https://github.com/zbx-sadman/unifi_proxy
+    dest: "{{ community_sources }}/unifi_proxy"
+    clone: yes
+    update: yes
+
+- name: unifi exporter from https://github.com/mdlayher/unifi_exporter to {{ community_sources }}
+  git: 
+    repo: https://github.com/mdlayher/unifi_exporter
+    dest: "{{ community_sources }}/unifi_exporter"
     clone: yes
     update: yes

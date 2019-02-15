@@ -17,3 +17,4 @@
     volumes:
       - "$PWD:/usr/src/myapp"
     command: "go get -v github.com/cloudflare/cloudflared/cmd/cloudflared; GOOS=linux GOARCH=mips go build -v -x github.com/cloudflare/cloudflared/cmd/cloudflared"
+  when: ansible_architecture == "x86_64"
