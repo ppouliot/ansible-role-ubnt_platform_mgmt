@@ -59,7 +59,7 @@
     group: "root"
     mode: "0755"
 
-
+# https://help.ubnt.com/hc/en-us/articles/204911374-Ubiquiti-Icons-and-Images-for-Diagrams
 - name: http://bobby3.com/visio/UBNT.vss
   get_url:
     url: "http://bobby3.com/visio/UBNT.vss"
