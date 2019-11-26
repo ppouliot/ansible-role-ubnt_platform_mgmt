@@ -33,6 +33,8 @@
     group: "root"
     mode: "0755"
 
+# https://help.ubnt.com/hc/en-us/articles/204911374-Ubiquiti-Icons-and-Images-for-Diagrams
+
 - name: https://help.ubnt.com/hc/en-us/article_attachments/214352908/UBNT_Icons_Visio_FileFormat.zip
   get_url:
     url: "https://help.ubnt.com/hc/en-us/article_attachments/214352908/UBNT_Icons_Visio_FileFormat.zip"
