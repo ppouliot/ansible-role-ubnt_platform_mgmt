@@ -33,7 +33,27 @@
     group: "root"
     mode: "0755"
 
+- name: https://help.ubnt.com/hc/en-us/article_attachments/214352908/UBNT_Icons_Visio_FileFormat.zip
+  get_url:
+    url: "https://help.ubnt.com/hc/en-us/article_attachments/214352908/UBNT_Icons_Visio_FileFormat.zip"
+    dest: "/usr/local/src/UBNT_Icons_Visio_FileFormat.zip"
+    owner: "root"
+    group: "root"
+    mode: "0755"
 
-
-
+- name: https://help.ubnt.com/hc/en-us/article_attachments/115009785668/UniFi_2017.vss
+  get_url:
+    url: "https://help.ubnt.com/hc/en-us/article_attachments/115009785668/UniFi_2017.vss"
+    dest: "/usr/local/src/UniFi_2017.vss"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+    
+- name: https://help.ubnt.com/hc/en-us/article_attachments/115009786248/UniFi-2017_SVG.zip
+  get_url:
+    url: "https://help.ubnt.com/hc/en-us/article_attachments/115009786248/UniFi-2017_SVG.zip"
+    dest: "/usr/local/src/UniFi-2017_SVG.zip"
+    owner: "root"
+    group: "root"
+    mode: "0755"
 
