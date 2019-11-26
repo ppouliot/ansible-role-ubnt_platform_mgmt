@@ -59,3 +59,11 @@
     group: "root"
     mode: "0755"
 
+
+- name: http://bobby3.com/visio/UBNT.vss
+  get_url:
+    url: "http://bobby3.com/visio/UBNT.vss"
+    dest: "/usr/local/src/UBNT.vss"
+    owner: "root"
+    group: "root"
+    mode: "0755"
