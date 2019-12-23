@@ -220,6 +220,10 @@ Here is a non-working  example of typical usage.
 * [https://github.com/TimoDJatomika/EdgeRouter-Stuff](https://github.com/TimoDJatomika/EdgeRouter-Stuff)
 * [Vyatta Network OS High Availability](https://ecl.ntt.com/files/firewall/5.2/vyatta-network-os-5.2r1-high-availability-2.pdf)
 
+### Troubleshooting
+
+* [cloud key wont start controller web UI we do not support upgrading from 5 11 46](https://community.ui.com/questions/cloud-key-wont-start-controller-web-UI-we-do-not-support-upgrading-from-5-11-46/88a7a0ef-1ba7-4913-ac10-681ff10b5f8c)
+
 ## Contributors
 ------------
 
