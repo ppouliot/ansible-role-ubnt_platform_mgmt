@@ -185,6 +185,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/jaysoffian/eap_proxy](https://github.com/jaysoffian/eap_proxy)
 * [https://github.com/ubiquiti/eot-controller](https://github.com/ubiquiti/eot-controller)
 * [https://github.com/Enatec/UniFiTooling](https://github.com/Enatec/UniFiTooling)
+* [https://github.com/martbrooks/unifi_ssl_certs](https://github.com/martbrooks/unifi_ssl_certs)
 
 ### Backup
 
