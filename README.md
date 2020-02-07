@@ -158,6 +158,7 @@ Here is a non-working  example of typical usage.
 * [Update AWS Route53](https://github.com/claytono/edgerouter-ansible)
 * [Install cloudflared on UniFI Controller](https://github.com/Twanislas/ubnt-cloudflared)
 * [Cloudflare DynDNS](https://github.com/ncb000gt/unifi-cloudflare-dyndns)
+* [https://github.com/Twanislas/ubnt-cloudflared](https://github.com/Twanislas/ubnt-cloudflared]
 * [https://khaz.me/cloudflare-ddns-configuration-for-unifi-usg/](https://khaz.me/cloudflare-ddns-configuration-for-unifi-usg/)
 
 
