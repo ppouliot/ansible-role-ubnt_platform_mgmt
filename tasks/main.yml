@@ -24,3 +24,5 @@
   include_tasks: build_mips_cloudflared.yml
   when:
     - inventory_hostname == "localhost"
+
+

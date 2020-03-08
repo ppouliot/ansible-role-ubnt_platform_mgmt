@@ -1,0 +1,7 @@
+# How to Change the Cloud Key's Controller Version via SSH
+# https://help.ubnt.com/hc/en-us/articles/216655518
+---
+
+- name: Install unifi_sysvinit_all.deb version {{ unifi_network_controller_version }} from https://dl.ubnt.com
+  apt:
+    deb: "https://dl.ubnt.com/unifi/{{ unifi_network_controller_version }}/unifi_sysvinit_all.deb"
