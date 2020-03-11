@@ -2,45 +2,18 @@
 
 # VLAN inter-accessibility for multicast devices.
 
-- name: Edit Protocols IGMP-Proxy on UBNT Device
-  edgeos_command:
-    commands: edit protocols igmp-proxy
-  when:
-    - ansible_connection == "network_cli"
- 
-- name: Set the interface eth1.80 role downstream on UBNT Device
-  edgeos_command:
-    commands: set interface eth1.80 role downstream
-  when:
-    - ansible_connection == "network_cli"
-    
-- name: Set interface eth1.80 threshold 1 on UBNT Device
-  edgeos_command:
-    commands: set interface eth1.80 threshold 1
-  when:
-    - ansible_connection == "network_cli
-    
-- name: Set interface eth1.80 alt-subnet 0.0.0.0/0 on UBNT Device
-  edgeos_command:
-    commands: set interface eth1.80 alt-subnet 0.0.0.0/0
-  when:
-    - ansible_connection == "network_cli"
-
-- name: Set interface eth1 role upstream on UBNT Device
-  edgeos_command:
-    commands: set interface eth1 role upstream
-  when:
-    - ansible_connection == "network_cli"
-
-- name: Set interface eth1 threshold 1 on UBNT Device
-  edgeos_command:
-    commands: set interface eth1 threshold 1
-  when:
-    - ansible_connection == "network_cli"
-
-- name: Set interface eth1 alt-subnet 0.0.0.0/0 on UBNT Device
-  edgeos_command:
-    commands: set interface eth1 alt-subnet 0.0.0.0/0
-  when:
-    - ansible_connection == "network_cli"
+    - name: "Configure EdgerouterX for debian repositories"
+      edgeos_config:
+        backup: yes
+        lines:
+          - edit protocols igmp-proxy
+          - set interface eth1.80 role downstream 
+          - set interface eth1.80 threshold 1
+          - set interface eth1.80 alt-subnet 0.0.0.0/0
+          - set interface eth1 role upstream
+          - set interface eth1 threshold 1
+          - set interface eth1 alt-subnet 0.0.0.0/0
+        save: yes
+      when:
+        - ansible_connection == "network_cli"
   
