@@ -2,14 +2,14 @@
 
 # VLAN inter-accessibility for multicast devices.
 
-    - name: "Configure EdgerouterX for debian repositories"
+    - name: "Configure VLAN inter-accessibility for multicast devices."
       edgeos_config:
         backup: yes
         lines:
           - edit protocols igmp-proxy
-          - set interface eth1.80 role downstream 
-          - set interface eth1.80 threshold 1
-          - set interface eth1.80 alt-subnet 0.0.0.0/0
+          - set interface eth1.3000 role downstream 
+          - set interface eth1.3000 threshold 1
+          - set interface eth1.3000 alt-subnet 0.0.0.0/0
           - set interface eth1 role upstream
           - set interface eth1 threshold 1
           - set interface eth1 alt-subnet 0.0.0.0/0
