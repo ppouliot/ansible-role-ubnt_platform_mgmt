@@ -1,0 +1,40 @@
+---
+- name: EdgeRouterX Debian Package Repository and Packages
+  hosts: erx
+  any_errors_fatal: true
+  tasks:
+
+    - name: collect all facts from the device
+      edgeos_facts:
+        gather_subset: all
+
+    - name: collect only the config and default facts
+      edgeos_facts:
+        gather_subset: config
+
+    - name: collect everything exception the config
+      edgeos_facts:
+        gather_subset: "!config"
+
+    - name: "Configure EdgerouterX for debian repositories"
+      edgeos_config:
+        backup: yes
+#        backup_options:
+#          filename: edgerouterx.cfg
+#          dir_path: ~/ansible/files
+        lines:
+#         - set system package repository stretch components 'main contrib non-free' 
+#         - set system package repository stretch distribution stretch 
+#         - set system package repository stretch url http://http.us.debian.org/debian
+          - set system package repository buster components 'main contrib non-free' 
+          - set system package repository buster distribution buster 
+          - set system package repository buster url http://http.us.debian.org/debian
+        save: yes
+
+    - name: Update Package Cache
+      edgeos_command:
+        commands: 'sudo apt-get update -y'
+
+#    - name: Install OpenConnect
+#      edgeos_command:
+#        commands: 'sudo apt-get install openconnect -y'
