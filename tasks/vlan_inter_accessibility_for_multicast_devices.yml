@@ -7,9 +7,9 @@
         backup: yes
         lines:
           - edit protocols igmp-proxy
-          - set interface eth1.3000 role downstream 
-          - set interface eth1.3000 threshold 1
-          - set interface eth1.3000 alt-subnet 0.0.0.0/0
+          - set interface eth1.{{ multicast_devices_vlan_id }} role downstream 
+          - set interface eth1.{{ sonos_vlan_id }} threshold 1
+          - set interface eth1.{{ sonos_vlan_id }} alt-subnet 0.0.0.0/0
           - set interface eth1 role upstream
           - set interface eth1 threshold 1
           - set interface eth1 alt-subnet 0.0.0.0/0
