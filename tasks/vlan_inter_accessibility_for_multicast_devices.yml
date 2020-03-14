@@ -7,12 +7,12 @@
         backup: yes
         lines:
           - edit protocols igmp-proxy
-          - set interface eth1.{{ sonos_vlan_id }} role downstream 
-          - set interface eth1.{{ sonos_vlan_id }} threshold 1
-          - set interface eth1.{{ sonos_vlan_id }} alt-subnet 0.0.0.0/0
-          - set interface eth1 role upstream
-          - set interface eth1 threshold 1
-          - set interface eth1 alt-subnet 0.0.0.0/0
+          - set interface {{ usg_multicast_interface }}.{{ sonos_vlan_id }} role downstream 
+          - set interface {{ usg_multicast_interface }}.{{ sonos_vlan_id }} threshold 1
+          - set interface {{ usg_multicast_interface }}.{{ sonos_vlan_id }} alt-subnet 0.0.0.0/0
+          - set interface {{ usg_multicast_interface }} role upstream
+          - set interface {{ usg_multicast_interface }} threshold 1
+          - set interface {{ usg_multicast_interface }} alt-subnet 0.0.0.0/0
         save: yes
       when:
         - ansible_connection == "network_cli"
