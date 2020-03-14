@@ -7,12 +7,16 @@
         backup: yes
         lines:
           - edit protocols igmp-proxy
-          - set interface {{ usg_multicast_interface }}.{{ sonos_vlan_id }} role downstream 
-          - set interface {{ usg_multicast_interface }}.{{ sonos_vlan_id }} threshold 1
-          - set interface {{ usg_multicast_interface }}.{{ sonos_vlan_id }} alt-subnet 0.0.0.0/0
-          - set interface {{ usg_multicast_interface }} role upstream
+          # In my case the Sonos devices are on VLAN1 or the Main VLAN of the Unifi network configuration
+          # It will be configured as the "Downstream" role
+          - set interface {{ usg_multicast_interface }} role downstream
           - set interface {{ usg_multicast_interface }} threshold 1
           - set interface {{ usg_multicast_interface }} alt-subnet 0.0.0.0/0
+          # I use a seperate VLAN for Private and public VLAN access. 
+          # In this case that Will be set as the "Upstream" role
+          - set interface {{ usg_multicast_interface }}.{{ wifi_vlan_id }} role upstream 
+          - set interface {{ usg_multicast_interface }}.{{ wifi_vlan_id }} threshold 1
+          - set interface {{ usg_multicast_interface }}.{{ wifi_vlan_id }} alt-subnet 0.0.0.0/0
         save: yes
       when:
         - ansible_connection == "network_cli"
