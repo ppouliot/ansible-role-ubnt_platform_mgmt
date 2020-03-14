@@ -234,6 +234,7 @@ Here is a non-working  example of typical usage.
 
 * [cloud key wont start controller web UI we do not support upgrading from 5 11 46](https://community.ui.com/questions/cloud-key-wont-start-controller-web-UI-we-do-not-support-upgrading-from-5-11-46/88a7a0ef-1ba7-4913-ac10-681ff10b5f8c)
 * [VLAN inter-accessibility for MultiCast devices (SONOS, Chromecast, Airtame, etc)](https://community.ui.com/questions/VLAN-inter-accessibility-for-MultiCast-devices-SONOS-Chromecast-Airtame-etc/f4d7a07c-d4ea-4238-8265-38ccd6e904c7)
+* [EdgeRouter Setup IGMP proxy and statistics](https://help.ubnt.com/hc/en-us/articles/204961854-EdgeRouter-Set-up-IGMP-proxy-and-statistics)
 
 ## Contributors
 ------------
