@@ -1,0 +1,18 @@
+{
+"protocols": {
+        "igmp-proxy": {
+            "interface": {
+                "{{ usg_igmp_proxy_interface }}": {
+                    "role": "downstream",
+                    "threshold": "1",
+                    "alt-subnet": "0.0.0.0/0"
+                },
+                "{{ usg_igmp_proxy_interface }}.{{ private_wifi_vlan_id }}": {
+                    "role": "upstream",
+                    "threshold": "1",
+                    "alt-subnet": "0.0.0.0/0"
+                }
+            }
+        }
+    }
+}
