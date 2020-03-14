@@ -20,8 +20,11 @@ community_sources: /usr/local/src
 
 
 # Multicast for Sonos fixes
-usg_multicast_interface: "eth0"
-sonos_vlan_id: "3000"
+usg_interface: "eth0"
+private_wifi_vlan_id: "3000"
+public_wifi_vlan_id: "3001"
+
+
 # AWS
 # aws_access_key_id: < AWS_ACCESS_KEY_ID >
 # aws_secret_access_key: < AWS_SECRET_ACCESS_KEY >
