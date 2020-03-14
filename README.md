@@ -236,6 +236,7 @@ Here is a non-working  example of typical usage.
 * [VLAN inter-accessibility for MultiCast devices (SONOS, Chromecast, Airtame, etc)](https://community.ui.com/questions/VLAN-inter-accessibility-for-MultiCast-devices-SONOS-Chromecast-Airtame-etc/f4d7a07c-d4ea-4238-8265-38ccd6e904c7)
 * [EdgeRouter Setup IGMP proxy and statistics](https://help.ubnt.com/hc/en-us/articles/204961854-EdgeRouter-Set-up-IGMP-proxy-and-statistics)
 * [Configure Sonos across subnets on USG](https://community.ui.com/questions/Configure-Sonos-across-subnets-on-USG/a758382b-72e4-446b-90cc-ea353482ff1a)
+* [Unifi Sonos and VLANs](https://blog.awelswynol.co.uk/2017/11/unifi-sonos-and-vlans)
 
 ## Contributors
 ------------
