@@ -18,6 +18,10 @@ unifi_network_controller_version: "5.12.35"
 ubnt_ssh_authorized_key: ~/.ssh/id_ed25519.pub
 community_sources: /usr/local/src
 
+
+# Multicast for Sonos fixes
+usg_multicast_interface: "eth0"
+sonos_vlan_id: "3000"
 # AWS
 # aws_access_key_id: < AWS_ACCESS_KEY_ID >
 # aws_secret_access_key: < AWS_SECRET_ACCESS_KEY >
