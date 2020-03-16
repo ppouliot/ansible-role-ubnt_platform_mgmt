@@ -163,7 +163,7 @@ Here is a non-working  example of typical usage.
 * [Cloudflare DynDNS](https://github.com/ncb000gt/unifi-cloudflare-dyndns)
 * [https://github.com/Twanislas/ubnt-cloudflared](https://github.com/Twanislas/ubnt-cloudflared)
 * [https://khaz.me/cloudflare-ddns-configuration-for-unifi-usg/](https://khaz.me/cloudflare-ddns-configuration-for-unifi-usg/)
-
+* [ubnt_cloudflared](https://github.com/yon2004/ubnt_cloudflared)
 
 
 ### API
