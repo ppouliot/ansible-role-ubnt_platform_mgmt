@@ -233,6 +233,12 @@ Here is a non-working  example of typical usage.
 * [Unifi Access Points Data Sheet](https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf)
 * [Unifi AP Mesh Data Sheet](https://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf)
 
+### Napalm
+
+* [napalm-vyos driver](https://github.com/napalm-automation-community/napalm-vyos) 
+* [napalm-edgeos driver older](https://github.com/thomseddon/napalm-edgeos)
+* [napalm-edgeos driver newer](https://github.com/barneysowood/napalm-edgeos
+
 ### Troubleshooting
 
 * [cloud key wont start controller web UI we do not support upgrading from 5 11 46](https://community.ui.com/questions/cloud-key-wont-start-controller-web-UI-we-do-not-support-upgrading-from-5-11-46/88a7a0ef-1ba7-4913-ac10-681ff10b5f8c)
