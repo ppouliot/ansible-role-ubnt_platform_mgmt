@@ -193,6 +193,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/ubiquiti/eot-controller](https://github.com/ubiquiti/eot-controller)
 * [https://github.com/Enatec/UniFiTooling](https://github.com/Enatec/UniFiTooling)
 * [https://github.com/martbrooks/unifi_ssl_certs](https://github.com/martbrooks/unifi_ssl_certs)
+* [https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py](https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py)
 
 ### Backup
 
