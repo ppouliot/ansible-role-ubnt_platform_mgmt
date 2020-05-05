@@ -229,6 +229,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/psaintemarie/unifi-bytel](https://github.com/psaintemarie/unifi-bytel)
 * [https://github.com/TimoDJatomika/EdgeRouter-Stuff](https://github.com/TimoDJatomika/EdgeRouter-Stuff)
 * [Vyatta Network OS High Availability](https://ecl.ntt.com/files/firewall/5.2/vyatta-network-os-5.2r1-high-availability-2.pdf)
+* [235723207-UniFi-USG-UDM-Port-Forwarding-Configuration-and-Troubleshooting](https://help.ui.com/hc/en-us/articles/235723207-UniFi-USG-UDM-Port-Forwarding-Configuration-and-Troubleshooting)
 
 ### PiHole Integration
 
