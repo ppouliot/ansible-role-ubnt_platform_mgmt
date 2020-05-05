@@ -229,6 +229,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/psaintemarie/unifi-bytel](https://github.com/psaintemarie/unifi-bytel)
 * [https://github.com/TimoDJatomika/EdgeRouter-Stuff](https://github.com/TimoDJatomika/EdgeRouter-Stuff)
 * [Vyatta Network OS High Availability](https://ecl.ntt.com/files/firewall/5.2/vyatta-network-os-5.2r1-high-availability-2.pdf)
+*  [PiHole - Catching and dealing w/ naughty devices](https://scotthelme.co.uk/catching-naughty-devices-on-my-home-network)
 
 ### Unifi Data Sheets
 
