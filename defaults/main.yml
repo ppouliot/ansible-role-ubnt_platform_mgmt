@@ -24,6 +24,9 @@ usg_igmp_proxy_interface: "eth0"
 private_wifi_vlan_id: "3000"
 public_wifi_vlan_id: "3001"
 
+# PiHole
+pihole_ipaddress: "10.1.1.141"
+
 
 # AWS
 # aws_access_key_id: < AWS_ACCESS_KEY_ID >

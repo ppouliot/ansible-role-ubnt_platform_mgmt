@@ -1,0 +1,32 @@
+---
+
+# Configure PiHole as Primary DNS across VLAN interfaces
+
+    - name: "DNS Redirect"
+      edgeos_config:
+        backup: yes
+        lines:
+          - set service nat rule 3 description "DNS Redirect to PiHole"
+          - set service nat rule 3 destination port 53
+          - set service nat rule 3 inbound-interface {{ usg_igmp_proxy_interface }}.{{ private_wifi_vlan_id }}
+          - set service nat rule 3 inside-address address {{ pihole_ipaddress }}
+          - set service nat rule 3 protocol tcp_udp
+          - set service nat rule 3 source address !{{ pihole_ipaddress }}
+          - set service nat rule 3 type destination
+        save: yes
+      when:
+        - ansible_connection == "network_cli"
+
+    - name: "Translate DNS"
+      edgeos_config:
+        backup: yes
+        lines:
+          - set service nat rule 5500 description "Translate PiHole DNS to Internal"
+          - set service nat rule 5500 destination address {{ pihole_ipaddress }} 
+          - set service nat rule 5500 destination port 53
+          - set service nat rule 5500 outbound-interface {{ usg_igmp_proxy_interface }}.{{ private_wifi_vlan_id }}
+          - set service nat rule 5500 protocol tcp_udp
+          - set service nat rule 5500 type masquerade
+        save: yes
+      when:
+        - ansible_connection == "network_cli"
