@@ -1,0 +1,639 @@
+set firewall all-ping enable
+set firewall broadcast-ping disable
+set firewall group address-group 5eb0b1927417a804e88e3273 address 192.168.0.0/16
+set firewall group address-group 5eb0b1927417a804e88e3273 address 172.16.0.0/12
+set firewall group address-group 5eb0b1927417a804e88e3273 address 10.0.0.0/8
+set firewall group address-group 5eb0b1927417a804e88e3273 description customized-RFC1918
+set firewall group address-group 5eb0998b7417a804e88df722 address 10.1.1.141
+set firewall group address-group 5eb0998b7417a804e88df722 description customized-PiHole
+set firewall group address-group authorized_guests description 'authorized guests MAC addresses'
+set firewall group address-group guest_allow_addresses description 'allow addresses for guests'
+set firewall group address-group guest_allow_dns_servers description 'allow dns servers for guests'
+set firewall group address-group guest_portal_address description 'guest portal address'
+set firewall group address-group guest_restricted_addresses address 192.168.0.0/16
+set firewall group address-group guest_restricted_addresses address 172.16.0.0/12
+set firewall group address-group guest_restricted_addresses address 10.0.0.0/8
+set firewall group address-group guest_restricted_addresses description 'restricted addresses for guests'
+set firewall group address-group unifi_controller_addresses address 10.1.1.173
+set firewall group ipv6-network-group corporate_networkv6 description 'IPv6 corporate subnets'
+set firewall group ipv6-network-group guest_networkv6 description 'IPv6 guest subnets'
+set firewall group network-group captive_portal_subnets description 'captive portal subnets'
+set firewall group network-group corporate_network description 'corporate subnets'
+set firewall group network-group corporate_network network 10.1.1.0/24
+set firewall group network-group corporate_network network 10.10.1.0/24
+set firewall group network-group guest_allow_subnets description 'allow subnets for guests'
+set firewall group network-group guest_network description 'guest subnets'
+set firewall group network-group guest_network network 192.168.1.0/24
+set firewall group network-group guest_restricted_subnets description 'restricted subnets for guests'
+set firewall group network-group remote_client_vpn_network description 'remote client VPN subnets'
+set firewall group network-group remote_site_vpn_network description 'remote site VPN subnets'
+set firewall group network-group remote_user_vpn_network description 'Remote User VPN subnets'
+set firewall group port-group 5eb09bba7417a804e88e0751 description customized-DNS
+set firewall group port-group 5eb09bba7417a804e88e0751 port 53
+set firewall group port-group guest_portal_ports description 'guest portal ports'
+set firewall group port-group guest_portal_redirector_ports description 'guest portal redirector ports'
+set firewall group port-group guest_portal_redirector_ports port 39080
+set firewall group port-group guest_portal_redirector_ports port 39443
+set firewall group port-group unifi_controller_ports-tcp description 'unifi tcp ports'
+set firewall group port-group unifi_controller_ports-tcp port 8080
+set firewall group port-group unifi_controller_ports-udp description 'unifi udp ports'
+set firewall group port-group unifi_controller_ports-udp port 3478
+set firewall ipv6-name AUTHORIZED_GUESTSv6 default-action drop
+set firewall ipv6-name AUTHORIZED_GUESTSv6 description 'authorization check packets from guest network'
+set firewall ipv6-name GUESTv6_IN default-action accept
+set firewall ipv6-name GUESTv6_IN description 'packets from guest network'
+set firewall ipv6-name GUESTv6_IN rule 3001 action drop
+set firewall ipv6-name GUESTv6_IN rule 3001 description 'drop packets to intranet'
+set firewall ipv6-name GUESTv6_IN rule 3001 destination group ipv6-network-group corporate_networkv6
+set firewall ipv6-name GUESTv6_LOCAL default-action drop
+set firewall ipv6-name GUESTv6_LOCAL description 'packets from guest network to gateway'
+set firewall ipv6-name GUESTv6_LOCAL rule 3001 action accept
+set firewall ipv6-name GUESTv6_LOCAL rule 3001 description 'allow DNS'
+set firewall ipv6-name GUESTv6_LOCAL rule 3001 destination port 53
+set firewall ipv6-name GUESTv6_LOCAL rule 3001 protocol udp
+set firewall ipv6-name GUESTv6_LOCAL rule 3002 action accept
+set firewall ipv6-name GUESTv6_LOCAL rule 3002 description 'allow ICMP'
+set firewall ipv6-name GUESTv6_LOCAL rule 3002 protocol icmp
+set firewall ipv6-name GUESTv6_OUT default-action accept
+set firewall ipv6-name GUESTv6_OUT description 'packets forward to guest network'
+set firewall ipv6-name LANv6_IN default-action accept
+set firewall ipv6-name LANv6_IN description 'packets from intranet'
+set firewall ipv6-name LANv6_LOCAL default-action accept
+set firewall ipv6-name LANv6_LOCAL description 'packets from intranet to gateway'
+set firewall ipv6-name LANv6_OUT default-action accept
+set firewall ipv6-name LANv6_OUT description 'packets forward to intranet'
+set firewall ipv6-name WANv6_IN default-action drop
+set firewall ipv6-name WANv6_IN description 'packets from internet to intranet'
+set firewall ipv6-name WANv6_IN rule 3001 action accept
+set firewall ipv6-name WANv6_IN rule 3001 description 'allow established/related sessions'
+set firewall ipv6-name WANv6_IN rule 3001 state established enable
+set firewall ipv6-name WANv6_IN rule 3001 state invalid disable
+set firewall ipv6-name WANv6_IN rule 3001 state new disable
+set firewall ipv6-name WANv6_IN rule 3001 state related enable
+set firewall ipv6-name WANv6_IN rule 3002 action drop
+set firewall ipv6-name WANv6_IN rule 3002 description 'drop invalid state'
+set firewall ipv6-name WANv6_IN rule 3002 state established disable
+set firewall ipv6-name WANv6_IN rule 3002 state invalid enable
+set firewall ipv6-name WANv6_IN rule 3002 state new disable
+set firewall ipv6-name WANv6_IN rule 3002 state related disable
+set firewall ipv6-name WANv6_LOCAL default-action drop
+set firewall ipv6-name WANv6_LOCAL description 'packets from internet to gateway'
+set firewall ipv6-name WANv6_LOCAL rule 3001 action accept
+set firewall ipv6-name WANv6_LOCAL rule 3001 description 'Allow neighbor advertisements'
+set firewall ipv6-name WANv6_LOCAL rule 3001 icmpv6 type neighbor-advertisement
+set firewall ipv6-name WANv6_LOCAL rule 3001 protocol ipv6-icmp
+set firewall ipv6-name WANv6_LOCAL rule 3002 action accept
+set firewall ipv6-name WANv6_LOCAL rule 3002 description 'Allow neighbor solicitation'
+set firewall ipv6-name WANv6_LOCAL rule 3002 icmpv6 type neighbor-solicitation
+set firewall ipv6-name WANv6_LOCAL rule 3002 protocol ipv6-icmp
+set firewall ipv6-name WANv6_LOCAL rule 3003 action accept
+set firewall ipv6-name WANv6_LOCAL rule 3003 description 'allow established/related sessions'
+set firewall ipv6-name WANv6_LOCAL rule 3003 state established enable
+set firewall ipv6-name WANv6_LOCAL rule 3003 state invalid disable
+set firewall ipv6-name WANv6_LOCAL rule 3003 state new disable
+set firewall ipv6-name WANv6_LOCAL rule 3003 state related enable
+set firewall ipv6-name WANv6_LOCAL rule 3004 action accept
+set firewall ipv6-name WANv6_LOCAL rule 3004 description 'Allow DHCPv6'
+set firewall ipv6-name WANv6_LOCAL rule 3004 destination port 546
+set firewall ipv6-name WANv6_LOCAL rule 3004 protocol udp
+set firewall ipv6-name WANv6_LOCAL rule 3004 source port 547
+set firewall ipv6-name WANv6_LOCAL rule 3005 action accept
+set firewall ipv6-name WANv6_LOCAL rule 3005 description 'Allow router advertisements'
+set firewall ipv6-name WANv6_LOCAL rule 3005 icmpv6 type router-advertisement
+set firewall ipv6-name WANv6_LOCAL rule 3005 protocol ipv6-icmp
+set firewall ipv6-name WANv6_LOCAL rule 3006 action drop
+set firewall ipv6-name WANv6_LOCAL rule 3006 description 'drop invalid state'
+set firewall ipv6-name WANv6_LOCAL rule 3006 state established disable
+set firewall ipv6-name WANv6_LOCAL rule 3006 state invalid enable
+set firewall ipv6-name WANv6_LOCAL rule 3006 state new disable
+set firewall ipv6-name WANv6_LOCAL rule 3006 state related disable
+set firewall ipv6-name WANv6_OUT default-action accept
+set firewall ipv6-name WANv6_OUT description 'packets to internet'
+set firewall ipv6-receive-redirects disable
+set firewall ipv6-src-route disable
+set firewall ip-src-route disable
+set firewall log-martians enable
+set firewall name AUTHORIZED_GUESTS default-action drop
+set firewall name AUTHORIZED_GUESTS description 'authorization check packets from guest network'
+set firewall name GUEST_IN default-action accept
+set firewall name GUEST_IN description 'packets from guest network'
+set firewall name GUEST_IN rule 3001 action accept
+set firewall name GUEST_IN rule 3001 description 'allow DNS packets to external name servers'
+set firewall name GUEST_IN rule 3001 destination port 53
+set firewall name GUEST_IN rule 3001 protocol tcp_udp
+set firewall name GUEST_IN rule 3002 action accept
+set firewall name GUEST_IN rule 3002 description 'allow packets to captive portal'
+set firewall name GUEST_IN rule 3002 destination group network-group captive_portal_subnets
+set firewall name GUEST_IN rule 3002 destination port 443
+set firewall name GUEST_IN rule 3002 protocol tcp
+set firewall name GUEST_IN rule 3003 action accept
+set firewall name GUEST_IN rule 3003 description 'allow packets to allow subnets'
+set firewall name GUEST_IN rule 3003 destination group address-group guest_allow_addresses
+set firewall name GUEST_IN rule 3004 action drop
+set firewall name GUEST_IN rule 3004 description 'drop packets to restricted subnets'
+set firewall name GUEST_IN rule 3004 destination group address-group guest_restricted_addresses
+set firewall name GUEST_IN rule 3005 action drop
+set firewall name GUEST_IN rule 3005 description 'drop packets to intranet'
+set firewall name GUEST_IN rule 3005 destination group network-group corporate_network
+set firewall name GUEST_IN rule 3006 action drop
+set firewall name GUEST_IN rule 3006 description 'drop packets to remote user'
+set firewall name GUEST_IN rule 3006 destination group network-group remote_user_vpn_network
+set firewall name GUEST_IN rule 3007 action drop
+set firewall name GUEST_IN rule 3007 description 'authorized guests white list'
+set firewall name GUEST_IN rule 3007 destination group address-group authorized_guests
+set firewall name GUEST_IN rule 6001 action accept
+set firewall name GUEST_IN rule 6001 description 'accounting defined network 192.168.1.0/24'
+set firewall name GUEST_IN rule 6001 source address 192.168.1.0/24
+set firewall name GUEST_LOCAL default-action drop
+set firewall name GUEST_LOCAL description 'packets from guest network to gateway'
+set firewall name GUEST_LOCAL rule 3001 action accept
+set firewall name GUEST_LOCAL rule 3001 description 'allow DNS'
+set firewall name GUEST_LOCAL rule 3001 destination port 53
+set firewall name GUEST_LOCAL rule 3001 protocol tcp_udp
+set firewall name GUEST_LOCAL rule 3002 action accept
+set firewall name GUEST_LOCAL rule 3002 description 'allow ICMP'
+set firewall name GUEST_LOCAL rule 3002 protocol icmp
+set firewall name GUEST_LOCAL rule 3003 action accept
+set firewall name GUEST_LOCAL rule 3003 description 'allow to DHCP server'
+set firewall name GUEST_LOCAL rule 3003 destination port 67
+set firewall name GUEST_LOCAL rule 3003 protocol udp
+set firewall name GUEST_LOCAL rule 3003 source port 68
+set firewall name GUEST_OUT default-action accept
+set firewall name GUEST_OUT description 'packets forward to guest network'
+set firewall name GUEST_OUT rule 6001 action accept
+set firewall name GUEST_OUT rule 6001 description 'accounting defined network 192.168.1.0/24'
+set firewall name GUEST_OUT rule 6001 destination address 192.168.1.0/24
+set firewall name LAN_IN default-action accept
+set firewall name LAN_IN description 'packets from intranet'
+set firewall name LAN_IN rule 6001 action accept
+set firewall name LAN_IN rule 6001 description 'accounting defined network 10.1.1.0/24'
+set firewall name LAN_IN rule 6001 source address 10.1.1.0/24
+set firewall name LAN_IN rule 6002 action accept
+set firewall name LAN_IN rule 6002 description 'accounting defined network 10.10.1.0/24'
+set firewall name LAN_IN rule 6002 source address 10.10.1.0/24
+set firewall name LAN_LOCAL default-action accept
+set firewall name LAN_LOCAL description 'packets from intranet to gateway'
+set firewall name LAN_OUT default-action accept
+set firewall name LAN_OUT description 'packets forward to intranet'
+set firewall name LAN_OUT rule 2000 action drop
+set firewall name LAN_OUT rule 2000 description 'RFC1918 to PiHole'
+set firewall name LAN_OUT rule 2000 destination group address-group 5eb0998b7417a804e88df722
+set firewall name LAN_OUT rule 2000 protocol all
+set firewall name LAN_OUT rule 2000 source group address-group 5eb0b1927417a804e88e3273
+set firewall name LAN_OUT rule 2000 state established enable
+set firewall name LAN_OUT rule 2000 state invalid disable
+set firewall name LAN_OUT rule 2000 state new enable
+set firewall name LAN_OUT rule 2000 state related disable
+set firewall name LAN_OUT rule 6001 action accept
+set firewall name LAN_OUT rule 6001 description 'accounting defined network 10.1.1.0/24'
+set firewall name LAN_OUT rule 6001 destination address 10.1.1.0/24
+set firewall name LAN_OUT rule 6002 action accept
+set firewall name LAN_OUT rule 6002 description 'accounting defined network 10.10.1.0/24'
+set firewall name LAN_OUT rule 6002 destination address 10.10.1.0/24
+set firewall name WAN_IN default-action drop
+set firewall name WAN_IN description 'packets from internet to intranet'
+set firewall name WAN_IN rule 2000 action drop
+set firewall name WAN_IN rule 2000 description 'IPS Block Traffic from 96.17.66.27 to 10.1.1.60'
+set firewall name WAN_IN rule 2000 destination address 10.1.1.60
+set firewall name WAN_IN rule 2000 protocol all
+set firewall name WAN_IN rule 2000 source address 96.17.66.27
+set firewall name WAN_IN rule 3001 action accept
+set firewall name WAN_IN rule 3001 description 'allow established/related sessions'
+set firewall name WAN_IN rule 3001 state established enable
+set firewall name WAN_IN rule 3001 state invalid disable
+set firewall name WAN_IN rule 3001 state new disable
+set firewall name WAN_IN rule 3001 state related enable
+set firewall name WAN_IN rule 3002 action drop
+set firewall name WAN_IN rule 3002 description 'drop invalid state'
+set firewall name WAN_IN rule 3002 state established disable
+set firewall name WAN_IN rule 3002 state invalid enable
+set firewall name WAN_IN rule 3002 state new disable
+set firewall name WAN_IN rule 3002 state related disable
+set firewall name WAN_IN rule 3003 action accept
+set firewall name WAN_IN rule 3003 description 'PortForward [hackintosh-ssh]'
+set firewall name WAN_IN rule 3003 destination address 10.1.1.48
+set firewall name WAN_IN rule 3003 destination port 22
+set firewall name WAN_IN rule 3003 log enable
+set firewall name WAN_IN rule 3003 protocol tcp_udp
+set firewall name WAN_IN rule 3004 action accept
+set firewall name WAN_IN rule 3004 description 'PortForward [Mymc]'
+set firewall name WAN_IN rule 3004 destination address 10.1.1.60
+set firewall name WAN_IN rule 3004 destination port 5832
+set firewall name WAN_IN rule 3004 protocol tcp_udp
+set firewall name WAN_IN rule 3005 action accept
+set firewall name WAN_IN rule 3005 description 'PortForward [FIOS-1]'
+set firewall name WAN_IN rule 3005 destination address 10.1.1.171
+set firewall name WAN_IN rule 3005 destination port 9001
+set firewall name WAN_IN rule 3005 log enable
+set firewall name WAN_IN rule 3005 protocol tcp
+set firewall name WAN_IN rule 3006 action accept
+set firewall name WAN_IN rule 3006 description 'PortForward [FIOS-2]'
+set firewall name WAN_IN rule 3006 destination address 10.1.1.171
+set firewall name WAN_IN rule 3006 destination port 63145
+set firewall name WAN_IN rule 3006 log enable
+set firewall name WAN_IN rule 3006 protocol udp
+set firewall name WAN_IN rule 3007 action accept
+set firewall name WAN_IN rule 3007 description 'PortForward [FIOS-4]'
+set firewall name WAN_IN rule 3007 destination address 10.1.1.174
+set firewall name WAN_IN rule 3007 destination port 63145
+set firewall name WAN_IN rule 3007 log enable
+set firewall name WAN_IN rule 3007 protocol udp
+set firewall name WAN_IN rule 3008 action accept
+set firewall name WAN_IN rule 3008 description 'PortForward [FIOS-4]'
+set firewall name WAN_IN rule 3008 destination address 10.1.1.174
+set firewall name WAN_IN rule 3008 destination port 9001
+set firewall name WAN_IN rule 3008 log enable
+set firewall name WAN_IN rule 3008 protocol tcp
+set firewall name WAN_LOCAL default-action drop
+set firewall name WAN_LOCAL description 'packets from internet to gateway'
+set firewall name WAN_LOCAL rule 3001 action accept
+set firewall name WAN_LOCAL rule 3001 description 'allow established/related sessions'
+set firewall name WAN_LOCAL rule 3001 state established enable
+set firewall name WAN_LOCAL rule 3001 state invalid disable
+set firewall name WAN_LOCAL rule 3001 state new disable
+set firewall name WAN_LOCAL rule 3001 state related enable
+set firewall name WAN_LOCAL rule 3002 action drop
+set firewall name WAN_LOCAL rule 3002 description 'drop invalid state'
+set firewall name WAN_LOCAL rule 3002 state established disable
+set firewall name WAN_LOCAL rule 3002 state invalid enable
+set firewall name WAN_LOCAL rule 3002 state new disable
+set firewall name WAN_LOCAL rule 3002 state related disable
+set firewall name WAN_OUT default-action accept
+set firewall name WAN_OUT description 'packets to internet'
+set firewall name WAN_OUT rule 2000 action drop
+set firewall name WAN_OUT rule 2000 description 'IPS Block Traffic from 10.1.1.60 to 96.17.66.27'
+set firewall name WAN_OUT rule 2000 destination address 96.17.66.27
+set firewall name WAN_OUT rule 2000 protocol all
+set firewall name WAN_OUT rule 2000 source address 10.1.1.60
+set firewall options mss-clamp interface-type pppoe
+set firewall options mss-clamp interface-type pptp
+set firewall options mss-clamp interface-type vti
+set firewall options mss-clamp mss 1452
+set firewall options mss-clamp6 interface-type pppoe
+set firewall options mss-clamp6 interface-type pptp
+set firewall options mss-clamp6 mss 1432
+set firewall receive-redirects disable
+set firewall send-redirects enable
+set firewall source-validation strict
+set firewall syn-cookies enable
+set interfaces ethernet eth0 address 10.1.1.1/24
+set interfaces ethernet eth0 description LAN
+set interfaces ethernet eth0 duplex auto
+set interfaces ethernet eth0 firewall in ipv6-name LANv6_IN
+set interfaces ethernet eth0 firewall in name LAN_IN
+set interfaces ethernet eth0 firewall local ipv6-name LANv6_LOCAL
+set interfaces ethernet eth0 firewall local name LAN_LOCAL
+set interfaces ethernet eth0 firewall out ipv6-name LANv6_OUT
+set interfaces ethernet eth0 firewall out name LAN_OUT
+set interfaces ethernet eth0 speed auto
+set interfaces ethernet eth0 vif 3000 address 10.10.1.1/24
+set interfaces ethernet eth0 vif 3000 firewall in ipv6-name LANv6_IN
+set interfaces ethernet eth0 vif 3000 firewall in name LAN_IN
+set interfaces ethernet eth0 vif 3000 firewall local ipv6-name LANv6_LOCAL
+set interfaces ethernet eth0 vif 3000 firewall local name LAN_LOCAL
+set interfaces ethernet eth0 vif 3000 firewall out ipv6-name LANv6_OUT
+set interfaces ethernet eth0 vif 3000 firewall out name LAN_OUT
+set interfaces ethernet eth0 vif 3001 address 192.168.1.1/24
+set interfaces ethernet eth0 vif 3001 firewall in ipv6-name GUESTv6_IN
+set interfaces ethernet eth0 vif 3001 firewall in name GUEST_IN
+set interfaces ethernet eth0 vif 3001 firewall local ipv6-name GUESTv6_LOCAL
+set interfaces ethernet eth0 vif 3001 firewall local name GUEST_LOCAL
+set interfaces ethernet eth0 vif 3001 firewall out ipv6-name GUESTv6_OUT
+set interfaces ethernet eth0 vif 3001 firewall out name GUEST_OUT
+set interfaces ethernet eth1 disable
+set interfaces ethernet eth1 duplex auto
+set interfaces ethernet eth1 speed auto
+set interfaces ethernet eth2 address dhcp
+set interfaces ethernet eth2 description WAN
+set interfaces ethernet eth2 dhcp-options client-option 'retry 60;'
+set interfaces ethernet eth2 dhcp-options default-route update
+set interfaces ethernet eth2 dhcp-options default-route-distance 1
+set interfaces ethernet eth2 dhcp-options name-server no-update
+set interfaces ethernet eth2 dhcpv6-pd no-dns
+set interfaces ethernet eth2 dhcpv6-pd pd 0 prefix-length 64
+set interfaces ethernet eth2 dhcpv6-pd rapid-commit enable
+set interfaces ethernet eth2 duplex auto
+set interfaces ethernet eth2 firewall in ipv6-name WANv6_IN
+set interfaces ethernet eth2 firewall in name WAN_IN
+set interfaces ethernet eth2 firewall local ipv6-name WANv6_LOCAL
+set interfaces ethernet eth2 firewall local name WAN_LOCAL
+set interfaces ethernet eth2 firewall out ipv6-name WANv6_OUT
+set interfaces ethernet eth2 firewall out name WAN_OUT
+set interfaces ethernet eth2 speed auto
+set interfaces ethernet eth3 disable
+set interfaces ethernet eth3 duplex auto
+set interfaces ethernet eth3 speed auto
+set interfaces loopback lo
+set port-forward auto-firewall disable
+set port-forward hairpin-nat enable
+set port-forward lan-interface eth0
+set port-forward lan-interface eth0.3000
+set port-forward lan-interface eth0.3001
+set port-forward rule 3001 description hackintosh-ssh
+set port-forward rule 3001 forward-to address 10.1.1.48
+set port-forward rule 3001 original-port 22
+set port-forward rule 3001 protocol tcp_udp
+set port-forward rule 3002 description Mymc
+set port-forward rule 3002 forward-to address 10.1.1.60
+set port-forward rule 3002 original-port 5832
+set port-forward rule 3002 protocol tcp_udp
+set port-forward rule 3003 description FIOS-1
+set port-forward rule 3003 forward-to address 10.1.1.171
+set port-forward rule 3003 forward-to port 9001
+set port-forward rule 3003 original-port 35000
+set port-forward rule 3003 protocol tcp
+set port-forward rule 3004 description FIOS-2
+set port-forward rule 3004 forward-to address 10.1.1.171
+set port-forward rule 3004 original-port 63145
+set port-forward rule 3004 protocol udp
+set port-forward rule 3005 description FIOS-4
+set port-forward rule 3005 forward-to address 10.1.1.174
+set port-forward rule 3005 forward-to port 63145
+set port-forward rule 3005 original-port 63146
+set port-forward rule 3005 protocol udp
+set port-forward rule 3006 description FIOS-4
+set port-forward rule 3006 forward-to address 10.1.1.174
+set port-forward rule 3006 forward-to port 9001
+set port-forward rule 3006 original-port 35001
+set port-forward rule 3006 protocol tcp
+set port-forward wan-interface eth2
+set service dhcp-server disabled false
+set service dhcp-server global-parameters 'class &quot;denied&quot; { match substring (hardware, 1, 6); deny booting; } subclass &quot;denied&quot; b4:fb:e4:29:f2:6d; subclass &quot;denied&quot; b4:fb:e4:29:f2:6e; subclass &quot;denied&quot; b4:fb:e4:29:f2:6f; subclass &quot;denied&quot; b4:fb:e4:29:f2:70;'
+set service dhcp-server hostfile-update enable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 authoritative enable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 description vlan1
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 default-router 10.1.1.1
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 dns-server 10.1.1.141
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 domain-name pouliot.net
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 lease 86400
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 start 10.1.1.6 stop 10.1.1.200
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0b-82-c6-76-5e host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0b-82-c6-76-5e ip-address 10.1.1.94
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0b-82-c6-76-5e mac-address '00:0b:82:c6:76:5e'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0c-1e-02-7d-55 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0c-1e-02-7d-55 ip-address 10.1.1.201
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0c-1e-02-7d-55 mac-address '00:0c:1e:02:7d:55'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0e-f3-45-63-26 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0e-f3-45-63-26 ip-address 10.1.1.13
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-0e-f3-45-63-26 mac-address '00:0e:f3:45:63:26'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1c-42-27-77-69 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1c-42-27-77-69 ip-address 10.1.1.15
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1c-42-27-77-69 mac-address '00:1c:42:27:77:69'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1c-42-e4-10-18 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1c-42-e4-10-18 ip-address 10.1.1.22
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1c-42-e4-10-18 mac-address '00:1c:42:e4:10:18'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-8d-5f host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-8d-5f ip-address 10.1.1.150
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-8d-5f mac-address '00:1e:06:32:8d:5f'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-be-b5 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-be-b5 ip-address 10.1.1.147
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-be-b5 mac-address '00:1e:06:32:be:b5'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-c3-25 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-c3-25 ip-address 10.1.1.149
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-c3-25 mac-address '00:1e:06:32:c3:25'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-c5-9c host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-c5-9c ip-address 10.1.1.148
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-32-c5-9c mac-address '00:1e:06:32:c5:9c'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-36-83-2e host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-36-83-2e ip-address 10.1.1.156
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-36-83-2e mac-address '00:1e:06:36:83:2e'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-36-83-32 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-36-83-32 ip-address 10.1.1.152
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1e-06-36-83-32 mac-address '00:1e:06:36:83:32'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1f-b8-1b-09-2c host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1f-b8-1b-09-2c ip-address 10.1.1.203
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-1f-b8-1b-09-2c mac-address '00:1f:b8:1b:09:2c'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-04-a3-dc-8f-21 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-04-a3-dc-8f-21 ip-address 10.1.1.204
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-04-a3-dc-8f-21 mac-address '00:04:a3:dc:8f:21'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-11-32-84-b0-41 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-11-32-84-b0-41 ip-address 10.1.1.37
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-11-32-84-b0-41 mac-address '00:11:32:84:b0:41'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-11-32-84-b0-42 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-11-32-84-b0-42 ip-address 10.1.1.36
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-11-32-84-b0-42 mac-address '00:11:32:84:b0:42'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-16-01-a5-40-e8 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-16-01-a5-40-e8 ip-address 10.1.1.9
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-16-01-a5-40-e8 mac-address '00:16:01:a5:40:e8'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-18-dd-05-81-7d host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-18-dd-05-81-7d ip-address 10.1.1.113
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-18-dd-05-81-7d mac-address '00:18:dd:05:81:7d'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-18-dd-31-1f-b2 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-18-dd-31-1f-b2 ip-address 10.1.1.112
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-18-dd-31-1f-b2 mac-address '00:18:dd:31:1f:b2'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-21-b9-00-fc-f0 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-21-b9-00-fc-f0 ip-address 10.1.1.200
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-21-b9-00-fc-f0 mac-address '00:21:b9:00:fc:f0'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-48-be-2b-da host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-48-be-2b-da ip-address 10.1.1.34
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-48-be-2b-da mac-address '00:22:48:be:2b:da'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-01 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-01 ip-address 10.1.1.170
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-01 mac-address '00:22:82:ff:ff:01'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-03 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-03 ip-address 10.1.1.145
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-03 mac-address '00:22:82:ff:ff:03'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-04 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-04 ip-address 10.1.1.144
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-22-82-ff-ff-04 mac-address '00:22:82:ff:ff:04'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-40-9d-6c-47-27 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-40-9d-6c-47-27 ip-address 10.1.1.202
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-40-9d-6c-47-27 mac-address '00:40:9d:6c:47:27'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-c0-b7-66-b2-ef host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-c0-b7-66-b2-ef ip-address 10.1.1.253
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-c0-b7-66-b2-ef mac-address '00:c0:b7:66:b2:ef'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-c0-b7-a2-26-1c host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-c0-b7-a2-26-1c ip-address 10.1.1.252
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 00-c0-b7-a2-26-1c mac-address '00:c0:b7:a2:26:1c'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-2b-eb-39-89 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-2b-eb-39-89 ip-address 10.1.1.130
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-2b-eb-39-89 mac-address '02:ba:2b:eb:39:89'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-2f-eb-36-e0 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-2f-eb-36-e0 ip-address 10.1.1.131
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-2f-eb-36-e0 mac-address '02:ba:2f:eb:36:e0'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-4b-f4-91-57 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-4b-f4-91-57 ip-address 10.1.1.133
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-4b-f4-91-57 mac-address '02:ba:4b:f4:91:57'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-5e-9d-cd-f7 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-5e-9d-cd-f7 ip-address 10.1.1.137
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-5e-9d-cd-f7 mac-address '02:ba:5e:9d:cd:f7'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-47-04-21-cf host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-47-04-21-cf ip-address 10.1.1.129
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-47-04-21-cf mac-address '02:ba:47:04:21:cf'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-78-b1-ac-bd host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-78-b1-ac-bd ip-address 10.1.1.126
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-78-b1-ac-bd mac-address '02:ba:78:b1:ac:bd'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-a7-79-8d-c5 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-a7-79-8d-c5 ip-address 10.1.1.134
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-ba-a7-79-8d-c5 mac-address '02:ba:a7:79:8d:c5'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-bc-c4-ce-20-16 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-bc-c4-ce-20-16 ip-address 10.1.1.155
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 02-bc-c4-ce-20-16 mac-address '02:bc:c4:ce:20:16'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 6c-c2-17-25-9c-c2 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 6c-c2-17-25-9c-c2 ip-address 10.1.1.12
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 6c-c2-17-25-9c-c2 mac-address '6c:c2:17:25:9c:c2'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 9c-ad-ef-07-02-be host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 9c-ad-ef-07-02-be ip-address 10.1.1.62
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 9c-ad-ef-07-02-be mac-address '9c:ad:ef:07:02:be'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 52-54-00-dc-6f-81 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 52-54-00-dc-6f-81 ip-address 10.1.1.233
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 52-54-00-dc-6f-81 mac-address '52:54:00:dc:6f:81'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 68-5b-35-94-d0-ad host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 68-5b-35-94-d0-ad ip-address 10.1.1.8
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 68-5b-35-94-d0-ad mac-address '68:5b:35:94:d0:ad'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 78-8a-20-09-c2-de host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 78-8a-20-09-c2-de ip-address 10.1.1.205
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 78-8a-20-09-c2-de mac-address '78:8a:20:09:c2:de'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 90-f1-aa-3d-a3-31 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 90-f1-aa-3d-a3-31 ip-address 10.1.1.162
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 90-f1-aa-3d-a3-31 mac-address '90:f1:aa:3d:a3:31'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 90-f1-aa-a1-0d-ed host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 90-f1-aa-a1-0d-ed ip-address 10.1.1.154
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping 90-f1-aa-a1-0d-ed mac-address '90:f1:aa:a1:0d:ed'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping a4-38-cc-8b-41-36 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping a4-38-cc-8b-41-36 ip-address 10.1.1.167
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping a4-38-cc-8b-41-36 mac-address 'a4:38:cc:8b:41:36'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping ac-63-be-77-1b-97 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping ac-63-be-77-1b-97 ip-address 10.1.1.29
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping ac-63-be-77-1b-97 mac-address 'ac:63:be:77:1b:97'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-8f-17-25 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-8f-17-25 ip-address 10.1.1.61
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-8f-17-25 mac-address 'b8:27:eb:8f:17:25'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-9e-dc-f3 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-9e-dc-f3 ip-address 10.1.1.164
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-9e-dc-f3 mac-address 'b8:27:eb:9e:dc:f3'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-10-eb-d9 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-10-eb-d9 ip-address 10.1.1.73
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-10-eb-d9 mac-address 'b8:27:eb:10:eb:d9'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-52-eb-ef host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-52-eb-ef ip-address 10.1.1.84
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-52-eb-ef mac-address 'b8:27:eb:52:eb:ef'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-d9-a7-b4 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-d9-a7-b4 ip-address 10.1.1.2
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping b8-27-eb-d9-a7-b4 mac-address 'b8:27:eb:d9:a7:b4'
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping cc-95-d7-3a-ac-91 host-record disable
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping cc-95-d7-3a-ac-91 ip-address 10.1.1.115
+set service dhcp-server shared-network-name net_LAN_eth0_10.1.1.0-24 subnet 10.1.1.0/24 static-mapping cc-95-d7-3a-ac-91 mac-address 'cc:95:d7:3a:ac:91'
+set service dhcp-server shared-network-name net_WIFI_Private_eth0_10.10.1.0-24 authoritative enable
+set service dhcp-server shared-network-name net_WIFI_Private_eth0_10.10.1.0-24 description vlan3000
+set service dhcp-server shared-network-name net_WIFI_Private_eth0_10.10.1.0-24 subnet 10.10.1.0/24 default-router 10.10.1.1
+set service dhcp-server shared-network-name net_WIFI_Private_eth0_10.10.1.0-24 subnet 10.10.1.0/24 dns-server 10.10.1.1
+set service dhcp-server shared-network-name net_WIFI_Private_eth0_10.10.1.0-24 subnet 10.10.1.0/24 domain-name wifi.pouliot.net
+set service dhcp-server shared-network-name net_WIFI_Private_eth0_10.10.1.0-24 subnet 10.10.1.0/24 lease 86400
+set service dhcp-server shared-network-name net_WIFI_Private_eth0_10.10.1.0-24 subnet 10.10.1.0/24 start 10.10.1.6 stop 10.10.1.254
+set service dhcp-server shared-network-name net_WIFI_Public_eth0_192.168.1.0-24 authoritative enable
+set service dhcp-server shared-network-name net_WIFI_Public_eth0_192.168.1.0-24 description vlan3001
+set service dhcp-server shared-network-name net_WIFI_Public_eth0_192.168.1.0-24 subnet 192.168.1.0/24 default-router 192.168.1.1
+set service dhcp-server shared-network-name net_WIFI_Public_eth0_192.168.1.0-24 subnet 192.168.1.0/24 dns-server 10.1.1.141
+set service dhcp-server shared-network-name net_WIFI_Public_eth0_192.168.1.0-24 subnet 192.168.1.0/24 domain-name public-wifi.pouliot.net
+set service dhcp-server shared-network-name net_WIFI_Public_eth0_192.168.1.0-24 subnet 192.168.1.0/24 lease 86400
+set service dhcp-server shared-network-name net_WIFI_Public_eth0_192.168.1.0-24 subnet 192.168.1.0/24 start 192.168.1.6 stop 192.168.1.254
+set service dhcp-server static-arp disable
+set service dhcp-server use-dnsmasq disable
+set service dns dynamic interface eth2 service dyndns host-name pouliot
+set service dns dynamic interface eth2 service dyndns login nouser
+set service dns dynamic interface eth2 service dyndns password b5c5dcef-7990-4e1f-9968-b1892769354a
+set service dns dynamic interface eth2 service dyndns server www.duckdns.org
+set service dns forwarding cache-size 10000
+set service dns forwarding except-interface eth2
+set service dns forwarding options ptr-record=1.1.1.10.in-addr.arpa,usg4p
+set service dns forwarding options all-servers
+set service dns forwarding options cname=unifi.pouliot.net,unifi.wifi.pouliot.net,unifi.public-wifi.pouliot.net,unifi
+set service dns forwarding options server=1.1.1.1
+set service dns forwarding options server=1.0.0.1
+set service dns forwarding options host-record=unifi,10.1.1.173
+set service gui http-port 80
+set service gui https-port 443
+set service gui older-ciphers enable
+set service ips alien enable
+set service ips enable 1
+set service ips interface eth0 op add
+set service ips rules ruleset emerging-dns enable
+set service ips rules ruleset emerging-exploit enable
+set service ips rules ruleset emerging-malware enable
+set service ips rules ruleset emerging-mobile enable
+set service ips rules ruleset emerging-shellcode enable
+set service ips rules ruleset emerging-useragent enable
+set service ips rules ruleset emerging-worm enable
+set service ips rules ruleset tor enable
+set service ips signature-scheduler 24
+set service ips tor enable
+set service lldp interface eth2 disable
+set service mdns reflector
+set service nat rule 6001 description 'MASQ corporate_network to WAN'
+set service nat rule 6001 log disable
+set service nat rule 6001 outbound-interface eth2
+set service nat rule 6001 protocol all
+set service nat rule 6001 source group network-group corporate_network
+set service nat rule 6001 type masquerade
+set service nat rule 6002 description 'MASQ remote_user_vpn_network to WAN'
+set service nat rule 6002 log disable
+set service nat rule 6002 outbound-interface eth2
+set service nat rule 6002 protocol all
+set service nat rule 6002 source group network-group remote_user_vpn_network
+set service nat rule 6002 type masquerade
+set service nat rule 6003 description 'MASQ guest_network to WAN'
+set service nat rule 6003 log disable
+set service nat rule 6003 outbound-interface eth2
+set service nat rule 6003 protocol all
+set service nat rule 6003 source group network-group guest_network
+set service nat rule 6003 type masquerade
+set service snmp community 1166Franklin authorization ro
+set service snmp contact peter@pouliot.net
+set service snmp location 1166Franklin
+set service ssh port 22
+set service ssh protocol-version v2
+set service upnp2 listen-on eth0
+set service upnp2 listen-on eth0.3000
+set service upnp2 nat-pmp enable
+set service upnp2 secure-mode enable
+set service upnp2 wan eth2
+set service utm deviceid 'b4:fb:e4:29:f2:6d'
+set service utm enable
+set service utm event-type alert
+set service utm optin enable
+set service utm token 2252a175bb89270edb891bfb8030d68690ae57a0db055ef7b2ee19d287bfab5b8
+set system conntrack expect-table-size 2048
+set system conntrack hash-size 32768
+set system conntrack table-size 262144
+set system conntrack timeout icmp 30
+set system conntrack timeout other 600
+set system conntrack timeout tcp close 10
+set system conntrack timeout tcp close-wait 60
+set system conntrack timeout tcp established 7440
+set system conntrack timeout tcp fin-wait 120
+set system conntrack timeout tcp last-ack 30
+set system conntrack timeout tcp syn-recv 60
+set system conntrack timeout tcp syn-sent 120
+set system conntrack timeout tcp time-wait 120
+set system conntrack timeout udp other 30
+set system conntrack timeout udp stream 180
+set system domain-name pouliot.net
+set system host-name usg4p
+set system ip arp base-reachable-time 30
+set system ip arp stale-time 60
+set system ip arp table-size 262144
+set system ip override-hostname-ip 10.1.1.1
+set system login user admin authentication encrypted-password '$6$/o6Ld0nj$ozXuKvoMuifDiilVB9z.ix0J9JjHLjgF85hfjaa1W.//oLRdkoLuovjm9wHBUYYNBJh.cdQRkArB0kFr9lWZa.'
+set system login user admin authentication public-keys ansible key AAAAB3NzaC1yc2EAAAADAQABAAACAQDBphxofd/o0IuSXu+e6BfIBYid20Xshd7eia4RaEXyMVq5IKLo8OdYMQAZiGHmf+cKMSIZTGk0sFR/cPDYNwpfIzamnvXYxUXR9m8a/YHkNfSDMcJFl8nXusqCrP1NGfonUAGa6bpNYLy6CJ/Zy/mDyqYzUwWvyRBEGqlfovvjAjDgV3Yw2gL5f3cgyaZw7/fOlFKx6jFo6xWR6iQxFwoaHuNXYp7pK6YhWHfRym/2GF6aau78lnf24blzJjK3kVOCTOyihFTYWAP54vlibJs1SwVauH1r0lmmQtX+oau6foXamc7oasGJxZtUNlBFJHttkGkri5y8x7wObDv/oYT60NwwNXBQhl23JgpDFKt2KUUhv8psU0G8VlWv84KdnuatfZSTve+vBiAhp+KR/mgBAMwPpSny2dxOpVpkwJk9d727l4dtXKkKJfkf3q9Diy2350PLUETdW9f6Q6Yn2sGcOYXgTgGkJlkJTIu5Af3ETjpaNteZioYigcuqv0slnQXCDALGDOgz0LhQBwBMqsd1WHM9OgFK9NcQR2q9I3+n/fqilButJVRnSukO4SXUd1aL4u83rOBjyGTBoQyxGE1hBFUTQaS6AxugXKV3jJ8UfD9+/WT1yrCkimKqFhh/8jTRInzKgwgJ0STH6wruUIkhj/5Bipm8fwBgTMHFpYpv9Q==
+set system login user admin authentication public-keys ansible type ssh-rsa
+set system login user admin level admin
+set system name-server 127.0.0.1
+set system ntp server 0.ubnt.pool.ntp.org
+set system offload ipsec disable
+set system offload ipv4 forwarding disable
+set system offload ipv4 gre disable
+set system offload ipv4 pppoe disable
+set system offload ipv4 vlan disable
+set system offload ipv6 forwarding disable
+set system offload ipv6 vlan disable
+set system static-host-mapping host-name setup.ubnt.com alias setup
+set system static-host-mapping host-name setup.ubnt.com inet 10.1.1.1
+set system syslog global facility all level debug
+set system syslog global facility protocols level debug
+set system syslog host '10.1.1.37:514' facility all level debug
+set system syslog host '10.1.1.37:514' facility protocols level debug
+set system time-zone America/New_York
+set system traffic-analysis dpi enable
+set system traffic-analysis export enable
+set unifi mgmt cfgversion ff439e578bfb08c1
