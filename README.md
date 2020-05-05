@@ -229,7 +229,14 @@ Here is a non-working  example of typical usage.
 * [https://github.com/psaintemarie/unifi-bytel](https://github.com/psaintemarie/unifi-bytel)
 * [https://github.com/TimoDJatomika/EdgeRouter-Stuff](https://github.com/TimoDJatomika/EdgeRouter-Stuff)
 * [Vyatta Network OS High Availability](https://ecl.ntt.com/files/firewall/5.2/vyatta-network-os-5.2r1-high-availability-2.pdf)
+
+### PiHole Integration
+
 *  [PiHole - Catching and dealing w/ naughty devices](https://scotthelme.co.uk/catching-naughty-devices-on-my-home-network)
+* [Unifi Usg dnat rule for pi-hole or other dns redirection](https://www.missingremote.com/guide/2018/07/unifi-usg-dnat-rule-for-pi-hole-or-other-dns-redirection)
+* [How To Enable InterVLAN Routing on the UniFi USG](https://community.ui.com/questions/How-To-Enable-InterVLAN-Routing-on-the-UniFi-USG/cf4a4213-6c6c-4002-8db9-faf941bf21d4)
+* [Firewall-rules-DNS-blocking-except-for-my-local-Pi-Hole](https://community.ui.com/questions/Firewall-rules-DNS-blocking-except-for-my-local-Pi-Hole/825cdd29-e33b-4460-9eca-fe93d43c62b5)
+* [PiHole across VLANs blocking internet traffic SOLVED](https://community.ui.com/questions/PiHole-across-VLANs-blocking-internet-traffic-SOLVED/6b403c9c-ec57-4449-b20b-c16fca99ad96)
 
 ### Unifi Data Sheets
 
