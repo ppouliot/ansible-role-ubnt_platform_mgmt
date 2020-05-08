@@ -248,7 +248,7 @@ Here is a non-working  example of typical usage.
 
 * [napalm-vyos driver](https://github.com/napalm-automation-community/napalm-vyos) 
 * [napalm-edgeos driver older](https://github.com/thomseddon/napalm-edgeos)
-* [napalm-edgeos driver newer](https://github.com/barneysowood/napalm-edgeos
+* [napalm-edgeos driver newer](https://github.com/barneysowood/napalm-edgeos)
 
 ### Troubleshooting
 
