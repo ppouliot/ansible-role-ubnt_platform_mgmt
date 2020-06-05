@@ -221,6 +221,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/mdlayher/unifi_exporter](https://github.com/mdlayher/unifi_exporter)
 * [https://github.com/caglar10ur/elk-usg](https://github.com/caglar10ur/elk-usg)
 * [https://github.com/custom-components/sensor.unifigateway](https://github.com/custom-components/sensor.unifigateway)
+* [unifi-poller](https://github.com/unifi-poller/unifi-poller)
 
 ### Configuration examples & Documentation
 
