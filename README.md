@@ -185,6 +185,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/PaintSplasher/unifi-voucher-service](https://github.com/PaintSplasher/unifi-voucher-service)
 * [
 https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotspot)
+* [https://github.com/batesta/whoshere](https://github.com/batesta/whoshere)
 
 ### Scripts
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
