@@ -183,7 +183,8 @@ Here is a non-working  example of typical usage.
 * [https://github.com/kaptk2/portal](https://github.com/kaptk2/portal)
 * [http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip](http://dl.ubnt.com/unifi/3.2.10/portal_sample_paypal.zip)
 * [https://github.com/PaintSplasher/unifi-voucher-service](https://github.com/PaintSplasher/unifi-voucher-service)
-
+* [
+https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotspot)
 
 ### Scripts
 * [https://github.com/stevejenkins/unifi-linux-utils](https://github.com/stevejenkins/unifi-linux-utils)
