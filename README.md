@@ -197,11 +197,13 @@ Here is a non-working  example of typical usage.
 * [https://github.com/msnelling/ansible-unifi](https://github.com/msnelling/ansible-unifi)
 * [https://github.com/boostchicken/udm-utilities](https://github.com/boostchicken/udm-utilities)
 * [https://github.com/unifi-toolbox/unifi-protect-video-downloader](https://github.com/unifi-toolbox/unifi-protect-video-downloader)
+* [https://github.com/yuppity/unifi-video-api](https://github.com/yuppity/unifi-video-api)
 
 ### Backup
 
 * [EdgeRouter to git repo backup scripts.](https://github.com/tbyehl/edgerouter-backup)
 * [Oxidized](https://github.com/ytti/oxidized)
+* [https://github.com/zhangyoufu/unifi-backup-decrypt](https://github.com/zhangyoufu/unifi-backup-decrypt)
 
 ### Monitoring, Alerting & Logging
 
@@ -226,6 +228,7 @@ Here is a non-working  example of typical usage.
 * [unifi-poller](https://github.com/unifi-poller/unifi-poller)
 * [https://github.com/tusc/ntopng-udm](https://github.com/tusc/ntopng-udm)
 * [https://github.com/iobroker-community-adapters/ioBroker.unifi](https://github.com/iobroker-community-adapters/ioBroker.unifi)
+* [https://github.com/custom-components/sensor.unifigateway](https://github.com/custom-components/sensor.unifigateway)
 
 ### Configuration examples & Documentation
 
