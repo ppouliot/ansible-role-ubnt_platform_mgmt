@@ -241,6 +241,7 @@ https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotsp
 * [https://github.com/iobroker-community-adapters/ioBroker.unifi](https://github.com/iobroker-community-adapters/ioBroker.unifi)
 * [https://github.com/custom-components/sensor.unifigateway](https://github.com/custom-components/sensor.unifigateway)
 * [https://github.com/finish06/Unifi-Metrics-Collector](https://github.com/finish06/Unifi-Metrics-Collector)
+* [https://github.com/jcoutch/usg-scripts](https://github.com/jcoutch/usg-scripts)
 
 
 ### Configuration examples & Documentation
