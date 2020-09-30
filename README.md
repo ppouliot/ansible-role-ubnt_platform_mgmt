@@ -224,6 +224,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/custom-components/sensor.unifigateway](https://github.com/custom-components/sensor.unifigateway)
 * [unifi-poller](https://github.com/unifi-poller/unifi-poller)
 * [https://github.com/tusc/ntopng-udm](https://github.com/tusc/ntopng-udm)
+* [https://github.com/iobroker-community-adapters/ioBroker.unifi](https://github.com/iobroker-community-adapters/ioBroker.unifi)
 
 ### Configuration examples & Documentation
 
