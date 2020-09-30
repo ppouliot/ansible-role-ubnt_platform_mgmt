@@ -143,6 +143,7 @@ Here is a non-working  example of typical usage.
 * [A Pi-hole equivalent for the Unifi Security Gateway](https://github.com/ndfred/unifi-pi-hole)
 * [pi-hole conditional forwarding and unifi networking](https://www.devwithimagination.com/2019/03/17/pi-hole-conditional-forwarding-and-unifi-networking/)
 * [catching naughty devices on my home network](https://scotthelme.co.uk/catching-naughty-devices-on-my-home-network/)
+* [https://github.com/brontide/usg-blacklist](https://github.com/brontide/usg-blacklist)
 
 ### VPN
 
