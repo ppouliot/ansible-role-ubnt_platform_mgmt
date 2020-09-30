@@ -167,6 +167,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/Twanislas/ubnt-cloudflared](https://github.com/Twanislas/ubnt-cloudflared)
 * [https://khaz.me/cloudflare-ddns-configuration-for-unifi-usg/](https://khaz.me/cloudflare-ddns-configuration-for-unifi-usg/)
 * [ubnt_cloudflared](https://github.com/yon2004/ubnt_cloudflared)
+* [https://github.com/kchristensen/udm-le](https://github.com/kchristensen/udm-le)
 
 
 ### API
