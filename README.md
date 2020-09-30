@@ -216,6 +216,7 @@ https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotsp
 
 * [EdgeRouter to git repo backup scripts.](https://github.com/tbyehl/edgerouter-backup)
 * [Oxidized](https://github.com/ytti/oxidized)
+* [https://github.com/gebn/unifibackup](https://github.com/gebn/unifibackup)
 * [https://github.com/zhangyoufu/unifi-backup-decrypt](https://github.com/zhangyoufu/unifi-backup-decrypt)
 
 ### Monitoring, Alerting & Logging
