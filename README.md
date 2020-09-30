@@ -196,6 +196,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py](https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py)
 * [https://github.com/msnelling/ansible-unifi](https://github.com/msnelling/ansible-unifi)
 * [https://github.com/boostchicken/udm-utilities](https://github.com/boostchicken/udm-utilities)
+* [https://github.com/unifi-toolbox/unifi-protect-video-downloader](https://github.com/unifi-toolbox/unifi-protect-video-downloader)
 
 ### Backup
 
