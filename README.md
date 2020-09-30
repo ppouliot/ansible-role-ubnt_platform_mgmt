@@ -150,6 +150,7 @@ Here is a non-working  example of typical usage.
 * [Pritunl to USG/Unifi](https://docs.pritunl.com/docs/ubiquiti-unifi)
 * [https://community.ubnt.com/t5/UniFi-Routing-Switching/OpenVPN-to-Pritunl-using-USG/td-p/2161699](https://community.ubnt.com/t5/UniFi-Routing-Switching/OpenVPN-to-Pritunl-using-USG/td-p/2161699)
 * [https://github.com/mafredri/vyatta-wireguard-installer](https://github.com/mafredri/vyatta-wireguard-installer)
+* [https://github.com/whiskerz007/ubnt_get_wireguard](https://github.com/whiskerz007/ubnt_get_wireguard)
 
 
 
