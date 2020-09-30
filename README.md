@@ -245,7 +245,7 @@ https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotsp
 * [https://github.com/custom-components/sensor.unifigateway](https://github.com/custom-components/sensor.unifigateway)
 * [https://github.com/finish06/Unifi-Metrics-Collector](https://github.com/finish06/Unifi-Metrics-Collector)
 * [https://github.com/jcoutch/usg-scripts](https://github.com/jcoutch/usg-scripts)
-
+* [https://github.com/Manawyrm/unifirespondd](https://github.com/Manawyrm/unifirespondd)
 
 ### Configuration examples & Documentation
 
