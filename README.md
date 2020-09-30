@@ -255,6 +255,8 @@ https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotsp
 * [https://github.com/TimoDJatomika/EdgeRouter-Stuff](https://github.com/TimoDJatomika/EdgeRouter-Stuff)
 * [Vyatta Network OS High Availability](https://ecl.ntt.com/files/firewall/5.2/vyatta-network-os-5.2r1-high-availability-2.pdf)
 * [235723207-UniFi-USG-UDM-Port-Forwarding-Configuration-and-Troubleshooting](https://help.ui.com/hc/en-us/articles/235723207-UniFi-USG-UDM-Port-Forwarding-Configuration-and-Troubleshooting)
+* [https://github.com/chashtag/unifi-8021x-setup](https://github.com/chashtag/unifi-8021x-setup)
+
 
 ### PiHole Integration
 
