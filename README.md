@@ -195,6 +195,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/martbrooks/unifi_ssl_certs](https://github.com/martbrooks/unifi_ssl_certs)
 * [https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py](https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py)
 * [https://github.com/msnelling/ansible-unifi](https://github.com/msnelling/ansible-unifi)
+* [https://github.com/boostchicken/udm-utilities](https://github.com/boostchicken/udm-utilities)
 
 ### Backup
 
@@ -222,6 +223,7 @@ Here is a non-working  example of typical usage.
 * [https://github.com/caglar10ur/elk-usg](https://github.com/caglar10ur/elk-usg)
 * [https://github.com/custom-components/sensor.unifigateway](https://github.com/custom-components/sensor.unifigateway)
 * [unifi-poller](https://github.com/unifi-poller/unifi-poller)
+* [https://github.com/tusc/ntopng-udm](https://github.com/tusc/ntopng-udm)
 
 ### Configuration examples & Documentation
 
@@ -250,6 +252,7 @@ Here is a non-working  example of typical usage.
 * [napalm-vyos driver](https://github.com/napalm-automation-community/napalm-vyos) 
 * [napalm-edgeos driver older](https://github.com/thomseddon/napalm-edgeos)
 * [napalm-edgeos driver newer](https://github.com/barneysowood/napalm-edgeos)
+
 
 ### Troubleshooting
 
