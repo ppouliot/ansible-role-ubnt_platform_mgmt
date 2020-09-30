@@ -203,8 +203,12 @@ https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotsp
 * [https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py](https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py)
 * [https://github.com/msnelling/ansible-unifi](https://github.com/msnelling/ansible-unifi)
 * [https://github.com/boostchicken/udm-utilities](https://github.com/boostchicken/udm-utilities)
+
+### surveillance tools
+
 * [https://github.com/unifi-toolbox/unifi-protect-video-downloader](https://github.com/unifi-toolbox/unifi-protect-video-downloader)
 * [https://github.com/yuppity/unifi-video-api](https://github.com/yuppity/unifi-video-api)
+* [https://github.com/petergeneric/unifi-protect-remux](https://github.com/petergeneric/unifi-protect-remux)
 
 ### Backup
 
