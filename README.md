@@ -206,6 +206,7 @@ https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotsp
 * [https://github.com/msnelling/ansible-unifi](https://github.com/msnelling/ansible-unifi)
 * [https://github.com/boostchicken/udm-utilities](https://github.com/boostchicken/udm-utilities)
 * [https://github.com/richardhofman/ansible-role-edgerouter/](https://github.com/richardhofman/ansible-role-edgerouter/)
+* [Ansible Example w/ Jinja template](https://gist.github.com/dgengtek/4471642fa4e5e46e2f9056b41fd1a63a)
 
 ### surveillance tools
 
