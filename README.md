@@ -205,6 +205,7 @@ https://github.com/woodjme/unifi-hotspot](https://github.com/woodjme/unifi-hotsp
 * [https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py](https://github.com/dmbaturin/scripts/blob/master/usg-config-export.py)
 * [https://github.com/msnelling/ansible-unifi](https://github.com/msnelling/ansible-unifi)
 * [https://github.com/boostchicken/udm-utilities](https://github.com/boostchicken/udm-utilities)
+* [https://github.com/richardhofman/ansible-role-edgerouter/](https://github.com/richardhofman/ansible-role-edgerouter/)
 
 ### surveillance tools
 
