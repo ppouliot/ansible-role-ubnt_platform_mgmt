@@ -285,10 +285,19 @@ https://github.com/tborychowski/unifi-event-monitor)
 ### Troubleshooting
 
 * [cloud key wont start controller web UI we do not support upgrading from 5 11 46](https://community.ui.com/questions/cloud-key-wont-start-controller-web-UI-we-do-not-support-upgrading-from-5-11-46/88a7a0ef-1ba7-4913-ac10-681ff10b5f8c)
+
+### Sonos
 * [VLAN inter-accessibility for MultiCast devices (SONOS, Chromecast, Airtame, etc)](https://community.ui.com/questions/VLAN-inter-accessibility-for-MultiCast-devices-SONOS-Chromecast-Airtame-etc/f4d7a07c-d4ea-4238-8265-38ccd6e904c7)
 * [EdgeRouter Setup IGMP proxy and statistics](https://help.ubnt.com/hc/en-us/articles/204961854-EdgeRouter-Set-up-IGMP-proxy-and-statistics)
 * [Configure Sonos across subnets on USG](https://community.ui.com/questions/Configure-Sonos-across-subnets-on-USG/a758382b-72e4-446b-90cc-ea353482ff1a)
 * [Unifi Sonos and VLANs](https://blog.awelswynol.co.uk/2017/11/unifi-sonos-and-vlans)
+* [An optimal configuration for a Unifi Managed Network & Sonos](https://community.ui.com/questions/An-optimal-configuration-for-a-Unifi-Managed-Network-and-Sonos/4819df0b-cc15-43b1-8f8f-4ca36c486f1c)
+* [Tips Connecting to SONOS speakers on a Unifi Wireless Network.](https://community.ui.com/questions/Tips-Connecting-to-SONOS-speakers-on-a-Unifi-Wireless-Network-/e1efc872-70e8-4d0b-9279-8ae74311798a)
+* [Sonos on Unifi Network Gear](https://jekhokie.github.io/unifi/sonos/networking/2020/12/06/sonos-on-unifi.html)
+* [How to configure your UniFi network for Sonos](https://github.com/IngmarStein/unifi-sonos-doc)
+* [Tips: Running Sonos wired and wireless in a pure Unifi (Ubiquiti) network environment](https://en.community.sonos.com/troubleshooting-228999/tips-running-sonos-wired-and-wireless-in-a-pure-unifi-ubiquiti-network-environment-6813112)
+* [Getting Sonos and Ubiquiti to play nice](https://community.ui.com/questions/Getting-Unifi-and-Sonos-to-play-nice/5d3c8cf2-5d11-4aea-ab4c-977736749159)
+
 
 ## Contributors
 ------------
