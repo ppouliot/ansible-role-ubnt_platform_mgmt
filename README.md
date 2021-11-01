@@ -299,7 +299,7 @@ https://github.com/tborychowski/unifi-event-monitor)
 * [Getting Sonos and Ubiquiti to play nice](https://community.ui.com/questions/Getting-Unifi-and-Sonos-to-play-nice/5d3c8cf2-5d11-4aea-ab4c-977736749159)
 
 ### Camera's
-* [Successfully Installed 2 G4 Doorbells with wiring diagram]https://www.reddit.com/r/Ubiquiti/comments/j5op2q/successfully_installed_2_g4_doorbells_with/)
+* [Successfully Installed 2 G4 Doorbells with wiring diagram](https://www.reddit.com/r/Ubiquiti/comments/j5op2q/successfully_installed_2_g4_doorbells_with/)
 
 ![Multiple Unifi Doorbell Wiring Diagram](https://media.gioia.cloud/blog/thoughts/doorbells/unifi-doorbell-wiring-diagram@light.png)
 
